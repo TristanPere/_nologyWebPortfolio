@@ -6,6 +6,15 @@
     font-weight: 400;
     font-size: 1rem;
 }
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 3785px;
+}
 
 header{
     font-family: 'Cormorant', serif;
@@ -13,7 +22,10 @@ header{
 }
 
 .navBar{
-    &__name{
+  
+    &__name{  
+    display: flex;
+    justify-content: center;
         font-size: 1.5rem;
 
     }
@@ -23,8 +35,16 @@ header{
 }
 
 .jobTitle{
+    flex-direction: column;
+    margin-top: 0cm;
+
     &__title{
+        margin-bottom: 15%;
         font-size: 5rem;
+    }
+    &__text{
+        font-size: 1rem;
+        margin-top: 15%;
     }
 }
 
@@ -41,14 +61,13 @@ header{
         font-weight: 800;
     }
     &__card{
-        margin: 
+        width:90%;
         &--04, &--05, &--06{
             display: none;
         }
     }
 }
 .image{
-        width: 90%;
         height: 16.75rem;
 
 }
