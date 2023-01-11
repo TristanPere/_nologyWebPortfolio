@@ -1,15 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Portfolio</title>
-</head>
-<body>
-    
-</body>
-<footer>
-    
-</footer>
+  </head>
+  <body>
+    <nav class="navBar">
+        <!-- can i set two classes for each header so the can all have the same font? -->
+      <a class="navBar__name">Tristan Peregrine</a> 
+      <a class="navBar__button navBar__button--about">About</a>
+      <a class="navBar__button navBar__button--portfolio">Porfolio</a>
+      <a class="navBar__button navBar__button--contact">Contact</a>
+    </nav>
+
+    <header class="jobTitle">
+      <h1 class="JobTitle__title">Junior Software Developer</h1>
+      <p class="jobTitle__description">
+        Nunc aliquam faucibus ac in donec commodo id. Dui viverra sit feugiat
+        massa pellentesque arcu at quis. Diam, elementum morbi pellentesque
+        blandit suscipit sit. Neque, et consequat phasellus augue neque mollis
+        tempor.
+      </p>
+    </header>
+
+    <div class="about">
+      <header class="about__text about__tex--header">About.</header>
+      <img class="about__image" src="" alt="Tristan Peregrine" />
+      <p class="about__text about__tex--paragraph">
+        Interdum sollicitudin fringilla quisque vivamus. Eget viverra metus,
+        ultrices aliquet. Velit, tincidunt sed sed proin pellentesque dictum
+        pulvinar. Arcu diam massa elementum tempor lectus. Aliquam lacus lacus
+        diam eget quisque purus etiam mi, curabitur. Imperdiet sed felis ipsum,
+        porttitor ipsum faucibus neque cursus. Quis blandit quisque sed diam at
+        tellus sagittis. Urna, vel nibh lectus condimentum. Purus pellentesque
+        scelerisque tristique in vestibulum augue accumsan. Eu morbi porttitor
+        dolor ipsum dui ultrices viverra nisi, leo. Erat porta risus, id enim
+        adipiscing sit amet at. Tortor, posuere pulvinar volutpat magnis felis
+        suspendisse ut. Tincidunt in pulvinar suspendisse lectus enim, tortor
+        mattis ut. Integer auctor aliquet tincidunt rhoncus at.
+      </p>
+    </div>
+
+    <div class="skills">Skills</div>
+
+    <h2>Portfolio</h2>
+    <div class="portfolio">
+      <div class="porfolio__card portfolio__card--01">
+        <img src="" alt="Portfolio01" />
+      </div>
+      <div class="porfolio__card portfolio__card--02"></div>
+      <div class="porfolio__card portfolio__card--03"></div>
+      <div class="porfolio__card portfolio__card--04"></div>
+      <div class="porfolio__card portfolio__card--05"></div>
+      <div class="porfolio__card portfolio__card--06"></div>
+    </div>
+
+    <a class="mainContact">Get in touch.</a>
+
+    <button class="mainContactButton">Contact</button>
+
+    <footer class="footerLinks">
+      <div class="footerLinks__box">
+        <button class="footerLinks_box--linkedin"><img src="./images/linkedin-icon.png" alt="Linkedin" /></button>
+        <button class="footerLinks_box--github"><img src="./images/Github-icon.png" alt="Github" /></button>
+        <button class="footerLinks_box--cv"><img src="./images/CV-icon.png" alt="CV" /></button>
+        
+        
+      </div>
+    </footer>
+  </body>
 </html>
