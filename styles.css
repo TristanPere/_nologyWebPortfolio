@@ -1,19 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant&family=Inter:wght@600&display=swap");
 * {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+header {
   font-family: "Cormorant", serif;
+  font-weight: 700;
+}
+
+.navBar__name {
+  font-size: 1.5rem;
+}
+.navBar__button {
+  display: none;
+}
+
+.jobTitle__title {
+  font-size: 5rem;
+}
+
+.skills {
+  display: none;
 }
 
 .portfolio {
   display: flex;
   flex-direction: column;
-  margin: 36px;
-  font-family: "Inter", sans-serif;
+  justify-content: space-between;
 }
-.portfolio__card--04, .portfolio__card--05, .portfolio__card--06 {
-  display: none;
+.portfolio__header {
+  font-weight: 800;
+}
+.portfolio__card {
+  margin: .portfolio__card --04, .portfolio__card --05, .portfolio__card --06;
+  margin-display: none;
 }
 
 .image {
-  width: 322.95px;
-  height: 265px;
+  width: 90%;
+  height: 16.75rem;
 }/*# sourceMappingURL=styles.css.map */
