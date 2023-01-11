@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant&family=Inter:wght@600&display=swap");
 * {
   font-family: "Cormorant", serif;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  margin: 36px;
+  font-family: "Inter", sans-serif;
+}
+.portfolio__card--04, .portfolio__card--05, .portfolio__card--06 {
+  display: none;
+}
+
+.image {
+  width: 322.95px;
+  height: 265px;
 }/*# sourceMappingURL=styles.css.map */

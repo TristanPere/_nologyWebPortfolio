@@ -3,3 +3,26 @@
 *{
     font-family: 'Cormorant', serif;
 }
+
+
+
+
+
+
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    margin: 36px;
+    font-family: 'Inter', sans-serif;
+    &__card{
+        &--04, &--05, &--06{
+            display: none;
+        }
+    }
+}
+.image{
+        width: 322.95px;
+        height: 265px;
+
+}
+            

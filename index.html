@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <nav class="navBar">
-        <!-- can i set two classes for each header so the can all have the same font? -->
-      <a class="navBar__name">Tristan Peregrine</a> 
+      <!-- can i set two classes for each header so the can all have the same font? -->
+      <a class="navBar__name">Tristan Peregrine</a>
       <a class="navBar__button navBar__button--about">About</a>
       <a class="navBar__button navBar__button--portfolio">Porfolio</a>
       <a class="navBar__button navBar__button--contact">Contact</a>
     </nav>
 
     <header class="jobTitle">
-      <h1 class="JobTitle__title">Junior Software Developer</h1>
+      <header class="JobTitle__title">Junior Software Developer</header>
       <p class="jobTitle__description">
         Nunc aliquam faucibus ac in donec commodo id. Dui viverra sit feugiat
         massa pellentesque arcu at quis. Diam, elementum morbi pellentesque
@@ -43,31 +44,103 @@
       </p>
     </div>
 
-    <div class="skills">Skills</div>
-
-    <h2>Portfolio</h2>
-    <div class="portfolio">
-      <div class="porfolio__card portfolio__card--01">
-        <img src="" alt="Portfolio01" />
+    <div class="skills">
+      <div class="skills__text">
+        <header class="skills__text skills_text--header">Skills</header>
+        <p>
+          Egestas dictumst enim dui ante nisl risus commodo. Pellentesque
+          dignissim praesent purus in neque erat et. Cras donec ut orci eget
+          neque bibendum cras. Vitae, ultricies arcu pretium duis.
+        </p>
       </div>
-      <div class="porfolio__card portfolio__card--02"></div>
-      <div class="porfolio__card portfolio__card--03"></div>
-      <div class="porfolio__card portfolio__card--04"></div>
-      <div class="porfolio__card portfolio__card--05"></div>
-      <div class="porfolio__card portfolio__card--06"></div>
+      <div class="skills__imgs">
+        <!-- <div class="skills__imgs__card" -->
+        <img src="./images/VectorGIT.png" alt="Github">
+        <img src="./images/VectorHTML5.png" alt="HTML5">
+        <img src="./images/VectorCSS3.png" alt="CSS3">
+        <img src="./images/VectorJavaScript.png" alt="JavaScript">
+        <img src="./images/VectorSCSS.png" alt="SCSS">
+        <img src="./images/VectorBEM.png" alt="BEM">
+        <img src="./images/VectorReact.png" alt="React">
+        <img src="./images/VectorJava.png" alt="Java">
+        <img src="./images/VectorSpringBoot.png" alt="SpringBoot">
+      </div>
     </div>
 
-    <a class="mainContact">Get in touch.</a>
+    <div class="portfolio">
+      <header class="portfolio__header">Portfolio</header>
 
-    <button class="mainContactButton">Contact</button>
+      <div class="portfolio__card portfolio__card--01">
+        <img
+          class="image image--portfolio01"
+          src="./images/ImageProjectCard.png"
+          alt="Portfolio One Screen Shot"
+        />
+        <header class="portfolio__card--head01">Portfolio 3</header>
+      </div>
+
+      <div class="portfolio__card portfolio__card--02">
+        <img
+          class="image image--portfolio02"
+          src="./images/ImageProjectCard.png"
+          alt="Portfolio Two Screen Shot"
+        />
+        <header class="portfolio__card--head02">Portfolio 3</header>
+      </div>
+
+      <div class="portfolio__card portfolio__card--03">
+        <img
+          class="image image--portfolio03"
+          src="./images/ImageProjectCard.png"
+          alt="Portfolio Three Screen Shot"
+        />
+        <header class="portfolio__card--head03">Portfolio 3</header>
+      </div>
+
+      <div class="portfolio__card portfolio__card--04">
+        <img
+          class="image image--portfolio04"
+          src="./images/ImageProjectCard.png"
+          alt="Portfolio Four Screen Shot"
+        />
+        <header class="portfolio__card--head04">Portfolio 4</header>
+      </div>
+
+      <div class="portfolio__card portfolio__card--05">
+        <img
+          class="image image--portfolio05"
+          src="./images/ImageProjectCard.png"
+          alt="Portfolio Five Screen Shot"
+        />
+        <header class="portfolio__card--head05">Portfolio 5</header>
+      </div>
+
+      <div class="portfolio__card portfolio__card--06">
+        <img
+          class="image image--portfolio06"
+          src="./images/ImageProjectCard.png"
+          alt="Portfolio Six Screen Shot"
+        />
+        <header class="portfolio__card--head06">Portfolio 6</header>
+      </div>
+    </div>
+
+    <div class="getInTouch">
+      <a class="getInTouch--title">Get in touch.</a>
+      <button class="getInTouch--button">Contact</button>
+    </div>
 
     <footer class="footerLinks">
       <div class="footerLinks__box">
-        <button class="footerLinks_box--linkedin"><img src="./images/linkedin-icon.png" alt="Linkedin" /></button>
-        <button class="footerLinks_box--github"><img src="./images/Github-icon.png" alt="Github" /></button>
-        <button class="footerLinks_box--cv"><img src="./images/CV-icon.png" alt="CV" /></button>
-        
-        
+        <button class="footerLinks_box--linkedin">
+          <img src="./images/linkedin-icon.png" alt="Linkedin" />
+        </button>
+        <button class="footerLinks_box--github">
+          <img src="./images/Github-icon.png" alt="Github" />
+        </button>
+        <button class="footerLinks_box--cv">
+          <img src="./images/CV-icon.png" alt="CV" />
+        </button>
       </div>
     </footer>
   </body>
