@@ -32,7 +32,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   width: 85%;
-  height: 12%;
+  height: auto;
 }
 .jobTitle__title {
   font-size: 5rem;
@@ -46,10 +46,10 @@ header {
   flex-direction: column;
   justify-content: space-between;
   width: 85%;
-  height: 30%;
+  height: auto;
 }
 .about__image {
-  height: 35%;
+  height: 40%;
 }
 .about__text--header {
   font-size: 2rem;
@@ -67,7 +67,7 @@ header {
   grid-template-areas: "portfolioTitle" "project01" "project02" "project03";
   grid-template-rows: 0.15fr 1fr 1fr 1fr;
   width: 85%;
-  height: 30%;
+  height: auto;
 }
 .portfolio__header {
   font-weight: 800;
@@ -79,7 +79,7 @@ header {
   grid-template-areas: "projectCardImage projectCardImage projectCardImage" "projectCardHead reactIcon scssIcon";
   grid-template-columns: 3fr 1fr 1fr;
   grid-template-columns: 5fr 1fr;
-  width: 90%;
+  width: 100%;
 }
 .portfolio__card__screenShot {
   grid-area: projectCardImage;
@@ -133,12 +133,15 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 85%;
-  height: 10%;
+  height: auto;
 }
 .getInTouch--title {
+  height: 100%;
+  width: 100%;
   font-size: 5rem;
   text-align: center;
   font-weight: 400;
+  margin-bottom: 20%;
 }
 .getInTouch--button {
   font-size: 1.125rem;
@@ -156,4 +159,18 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.footerLinks__box {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+.footerLinks__box--linkedin {
+  margin: 5%;
+}
+.footerLinks__box--github {
+  margin: 5%;
+}
+.footerLinks__box--cv {
+  margin: 5%;
 }/*# sourceMappingURL=styles.css.map */

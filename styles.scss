@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant&family=Inter:wght@600&display=swap');
 
 *{
-
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1rem;
@@ -20,7 +19,6 @@ header{
 }
 
 .navBar{
-  
     &__name{  
     display: flex;
     justify-content: center;
@@ -37,7 +35,7 @@ header{
     flex-direction: column;
     justify-content: space-between;
     width:85%;
-    height: 12%;
+    height: auto;
     &__title{
         font-size: 5rem;
     }
@@ -51,9 +49,9 @@ header{
     flex-direction: column;
     justify-content: space-between;
     width: 85%;
-    height: 30%;
+    height: auto;
     &__image{
-        height: 35%;
+        height: 40%;
     }
     &__text{
         &--header{
@@ -64,7 +62,6 @@ header{
         }
     }
 }
-
 
 .skills{
     display: none;  
@@ -81,7 +78,7 @@ header{
     grid-template-rows: 0.15fr 1fr 1fr 1fr;
     // justify-content: space-between;
     width: 85%;
-    height: 30%;
+    height: auto;
     &__header{
         font-weight: 800;
         font-size: 2rem;
@@ -95,7 +92,7 @@ header{
         'projectCardHead reactIcon scssIcon';
         grid-template-columns: 3fr 1fr 1fr;
         grid-template-columns: 5fr 1fr;
-        width:90%;
+        width:100%;
         &__screenShot{
             grid-area: projectCardImage;
             width: 100%;
@@ -154,11 +151,14 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 85%;
-    height: 10%;
+    height: auto;
     &--title{
+        height: 100%;
+        width: 100%;
         font-size: 5rem;
         text-align: center;
         font-weight: 400;
+        margin-bottom:20%;
     }
     &--button{
         font-size: 1.125rem;
@@ -179,4 +179,26 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    &__box{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        &--linkedin{
+            margin:5%;
+        }
+        &--github{
+            margin:5%;
+        }
+        &--cv{
+            margin:5%;
+        }
+
+    }
 }
+
+@media screen and (width: 768px) {
+
+    
+    
+}
+
