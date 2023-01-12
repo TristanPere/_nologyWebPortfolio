@@ -173,4 +173,28 @@ header {
 }
 .footerLinks__box--cv {
   margin: 5%;
+}
+
+@media screen and (min-width: 768px) {
+  .navBar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .navBar__button {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+  }
+  .skills {
+    display: flex;
+    flex-direction: column;
+  }
+  .skills__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }/*# sourceMappingURL=styles.css.map */

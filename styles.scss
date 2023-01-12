@@ -196,9 +196,32 @@ header{
     }
 }
 
-@media screen and (width: 768px) {
-
-    
-    
+@media screen and(min-width: 768px){
+    .navBar{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        &__button{
+            display: flex;
+            width:30%;
+            align-items: center;
+            justify-content: center;
+           }
+        }   
+    .skills{
+        display: flex;
+        flex-direction: column;
+        &__text{
+            display: flex;
+            flex-direction: row;
+        }
+        &__card{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            width:
+        }
+    }
 }
 

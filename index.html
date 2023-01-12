@@ -11,9 +11,11 @@
     <nav class="navBar">
       <!-- can i set two classes for each header so the can all have the same font? -->
       <header class="navBar__name">Tristan Peregrine</header>
-      <a class="navBar__button navBar__button--about">About</a>
-      <a class="navBar__button navBar__button--portfolio">Porfolio</a>
-      <a class="navBar__button navBar__button--contact">Contact</a>
+      <div class="navBar__button">
+        <a class="navBar__button navBar__button--about">About</a>
+        <a class="navBar__button navBar__button--portfolio">Porfolio</a>
+        <a class="navBar__button navBar__button--contact">Contact</a>
+      </div>
     </nav>
 
     <header class="jobTitle">
@@ -52,14 +54,14 @@
 
     <div class="skills">
       <div class="skills__text">
-        <header class="skills__text skills_text--header">SKILLS</header>
-        <p>
+        <header class="skills__text skills__text--header">SKILLS</header>
+        <p class="skills__text skills__text--paragraph">
           Egestas dictumst enim dui ante nisl risus commodo. Pellentesque
           dignissim praesent purus in neque erat et. Cras donec ut orci eget
           neque bibendum cras. Vitae, ultricies arcu pretium duis.
         </p>
       </div>
-      <div class="skills__">
+      <div class="skills__card">
         <div class="skills__card--github">
           <img src="./images/VectorGIT.png" alt="Github" />
           <p>GitHub</p>
