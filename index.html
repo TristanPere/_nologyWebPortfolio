@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+
     <nav class="navBar">
       <!-- can i set two classes for each header so the can all have the same font? -->
       <header class="navBar__name">Tristan Peregrine</header>
@@ -15,6 +16,10 @@
       <a class="navBar__button navBar__button--portfolio">Porfolio</a>
       <a class="navBar__button navBar__button--contact">Contact</a>
     </nav>
+
+
+
+
 
     <header class="jobTitle">
       <header class="jobTitle__title">Junior Software Developer</header>
@@ -26,9 +31,16 @@
       </p>
     </header>
 
+
+
+
     <div class="about">
       <header class="about__text about__text--header">About.</header>
-      <img class="about__image" src="./images/portraitPhoto.png" alt="Tristan Peregrine" />
+      <img
+        class="about__image"
+        src="./images/portraitPhoto.png"
+        alt="Tristan Peregrine"
+      />
       <p class="about__text about__text--paragraph">
         Interdum sollicitudin fringilla quisque vivamus. Eget viverra metus,
         ultrices aliquet. Velit, tincidunt sed sed proin pellentesque dictum
@@ -44,6 +56,10 @@
       </p>
     </div>
 
+
+
+
+
     <div class="skills">
       <div class="skills__text">
         <header class="skills__text skills_text--header">Skills</header>
@@ -53,119 +69,228 @@
           neque bibendum cras. Vitae, ultricies arcu pretium duis.
         </p>
       </div>
-      <div class="skills__imgs">
-        <div class="skills__imgs__card--github">
+      <div class="skills__">
+        <div class="skills__card--github">
           <img src="./images/VectorGIT.png" alt="Github" />
           <p>GitHub</p>
         </div>
-        <div class="skills__imgs__card--html5">
+        <div class="skills__card--html5">
           <img src="./images/VectorHTML5.png" alt="HTML5" />
           <p>HTML5</p>
         </div>
-        <div class="skills__imgs__card--html5">
+        <div class="skills__card--css3">
           <img src="./images/VectorCSS3.png" alt="CSS3" />
           <p>CSS3</p>
         </div>
-        <div class="skills__imgs__card--html5">
+        <div class="skills__card--javaScript">
           <img src="./images/VectorJavaScript.png" alt="JavaScript" />
           <p>JavaScript</p>
         </div>
-        <div class="skills__imgs__card--html5">
+        <div class="skills__card--scss">
           <img src="./images/VectorSCSS.png" alt="SCSS" />
-          <p>SCSS</p>
+           <p>SCSS</p>
         </div>
-        <div class="skills__imgs__card--html5">
+        <div class="skills__card--bem">
           <img src="./images/VectorBEM.png" alt="BEM" />
           <p>BEM</p>
         </div>
-        <div class="skills__imgs__card--html5">
+        <div class="skills__card--react">
           <img src="./images/VectorReact.png" alt="React" />
           <p>React</p>
         </div>
-        <div class="skills__imgs__card--html5">
+        <div class="skills__card--java">
           <img src="./images/VectorJava.png" alt="Java" />
           <p>Java</p>
         </div>
-        <div class="skills__imgs__card--html5">
+        <div class="skills__card--springBoot">
           <img src="./images/VectorSpringBoot.png" alt="SpringBoot" />
           <p>SpringBoot</p>
         </div>
       </div>
     </div>
 
+
+
+
+
     <div class="portfolio">
       <header class="portfolio__header">Portfolio</header>
 
       <div class="portfolio__card portfolio__card--01">
         <img
-          class="image image--portfolio01"
+          class="portfolio__card__screenShot portfolio__card__screenShot--01"
           src="./images/ImageProjectCard.png"
           alt="Portfolio One Screen Shot"
         />
         <header class="portfolio__card--head01">Project 1</header>
+        <div class="portfolio__card__icon">
+          <img
+            class="portfolio__card__icon portfolio__card__icon--react"
+            src="./images/ReactEye.png"
+            alt="React"
+          />
+          <p class="portfolio__card__icon--reactTxt">React</p>
+        </div>
+        <div class="portfolio__card__icon">
+          <img
+            class="portfolio__card__icon portfolio__card__icon--scss"
+            src="./images/Code-Slash.png"
+            alt="SCSS"
+          />
+          <p class="portfolio__card__icon--scssTxt">SCSS</p>
+        </div>
       </div>
 
       <div class="portfolio__card portfolio__card--02">
         <img
-          class="image image--portfolio02"
+          class="portfolio__card__screenShot portfolio__card__screenShot--02"
           src="./images/ImageProjectCard.png"
           alt="Portfolio Two Screen Shot"
         />
         <header class="portfolio__card--head02">Project 2</header>
+        <div class="portfolio__card__icon">
+          <img
+            class="portfolio__card__icon portfolio__card__icon--react"
+            src="./images/ReactEye.png"
+            alt="React"
+          />
+          <p class="portfolio__card__icon--reactTxt">React</p>
+        </div>
+        <div class="portfolio__card__icon">
+          <img
+            class="portfolio__card__icon portfolio__card__icon--scss"
+            src="./images/Code-Slash.png"
+            alt="SCSS"
+          />
+           <p class="portfolio__card__icon--scssTxt">SCSS</p>
+        </div>
       </div>
 
       <div class="portfolio__card portfolio__card--03">
         <img
-          class="image image--portfolio03"
+          class="portfolio__card__screenShot portfolio__card__screenShot--03"
           src="./images/ImageProjectCard.png"
           alt="Portfolio Three Screen Shot"
         />
         <header class="portfolio__card--head03">Project 3</header>
+        <div class="portfolio__card__icon">
+          <img
+            class="portfolio__card__icon portfolio__card__icon--react"
+            src="./images/ReactEye.png"
+            alt="React"
+          />
+          <p class="portfolio__card__icon--reactTxt">React</p>
+        </div>
+        <div class="portfolio__card__icon">
+          <img
+            class="portfolio__card__icon portfolio__card__icon--scss"
+            src="./images/Code-Slash.png"
+            alt="SCSS"
+          />
+           <p class="portfolio__card__icon--scssTxt">SCSS</p>
+        </div>
       </div>
 
       <div class="portfolio__card portfolio__card--04">
         <img
-          class="image image--portfolio04"
+          class="portfolio__card__screenShot portfolio__card__screenShot--04"
           src="./images/ImageProjectCard.png"
           alt="Portfolio Four Screen Shot"
         />
         <header class="portfolio__card--head04">Project 4</header>
+        <div class="portfolio__card__icon">
+          <img
+            class="portfolio__card__icon portfolio__card__icon--react"
+            src="./images/ReactEye.png"
+            alt="React"
+          />
+          <p class="portfolio__card__icon--reactTxt">React</p>
+        </div>
+        <div class="portfolio__card__icon">
+          <img
+            class="portfolio__card__icon portfolio__card__icon--scss"
+            src="./images/Code-Slash.png"
+            alt="SCSS"
+          />
+           <p class="portfolio__card__icon--scssTxt">SCSS</p>
+        </div>
       </div>
 
       <div class="portfolio__card portfolio__card--05">
         <img
-          class="image image--portfolio05"
+          class="portfolio__card__screenShot portfolio__card__screenShot--05"
           src="./images/ImageProjectCard.png"
           alt="Portfolio Five Screen Shot"
         />
         <header class="portfolio__card--head05">Project 5</header>
+        <div class="portfolio__card__icon">
+          <img
+            class="portfolio__card__icon portfolio__card__icon--react"
+            src="./images/ReactEye.png"
+            alt="React"
+          />
+          <p class="portfolio__card__icon--reactTxt">React</p>
+        </div>
+        <div class="portfolio__card__icon">
+          <img
+            class="portfolio__card__icon portfolio__card__icon--scss"
+            src="./images/Code-Slash.png"
+            alt="SCSS"
+          />
+           <p class="portfolio__card__icon--scssTxt">SCSS</p>
+        </div>
       </div>
 
       <div class="portfolio__card portfolio__card--06">
         <img
-          class="image image--portfolio06"
+          class="portfolio__card__screenShot portfolio__card__screenShot--06"
           src="./images/ImageProjectCard.png"
           alt="Portfolio Six Screen Shot"
         />
         <header class="portfolio__card--head06">Project 6</header>
-      </div>
+        <div class="portfolio__card__icon">
+          <img
+            class="portfolio__card__icon portfolio__card__icon--react"
+            src="./images/ReactEye.png"
+            alt="React"
+          />
+          <p class="portfolio__card__icon--reactTxt">React</p>
+        </div>
+        <div class="portfolio__card__icon">
+          <img
+            class="portfolio__card__icon portfolio__card__icon--scss"
+            src="./images/Code-Slash.png"
+            alt="SCSS"
+          />
+           <p class="portfolio__card__icon--scssTxt">SCSS</p>
+        </div>
     </div>
+
+
+
 
     <div class="getInTouch">
       <header class="getInTouch--title">Get in touch.</header>
       <button class="getInTouch--button">Contact</button>
     </div>
 
+
+
+
+    
     <footer class="footerLinks">
       <div class="footerLinks__box">
         <button class="footerLinks_box--linkedin">
-          <img src="./images/linkedin-icon.png" alt="Linkedin" />
+          <img
+            src="./images/linkedin-portfolio__card__icon.png"
+            alt="Linkedin"
+          />
         </button>
         <button class="footerLinks_box--github">
-          <img src="./images/Github-icon.png" alt="Github" />
+          <img src="./images/Github-portfolio__card__icon.png" alt="Github" />
         </button>
         <button class="footerLinks_box--cv">
-          <img src="./images/CV-icon.png" alt="CV" />
+          <img src="./images/CV-portfolio__card__icon.png" alt="CV" />
         </button>
       </div>
     </footer>

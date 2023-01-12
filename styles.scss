@@ -35,23 +35,36 @@ header{
 }
 
 .jobTitle{
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // margin-top: 0cm;
     width:85%;
-
+    height: 12%;
     &__title{
-        // margin-bottom: 15%;
         font-size: 5rem;
     }
     &__text{
         font-size: 1rem;
-        // margin-top: 15%;
     }
 }
 
 .about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 85%;
+    height: 30%;
+    &__image{
+        height: 35%;
+    }
+    &__text{
+        &--header{
+            font-size: 2rem;
+        }
+        &--paragraph{
+            font-size: 1rem;
+        }
+    }
 }
 
 
@@ -69,14 +82,21 @@ header{
         font-weight: 800;
     }
     &__card{
+        display: grid;
+        // grid-template-areas: ;
         width:90%;
+        &__screenShot{
+            grid-area: "screenShot";
+            width: 100%;
+        }
+        &__
         &--04, &--05, &--06{
             display: none;
         }
     }
-}
-.image{
-        height: 16.75rem;
 
 }
             
+.portfolioScrSht{
+    
+}

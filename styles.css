@@ -28,9 +28,11 @@ header {
 }
 
 .jobTitle {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 85%;
+  height: 12%;
 }
 .jobTitle__title {
   font-size: 5rem;
@@ -40,7 +42,20 @@ header {
 }
 
 .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 85%;
+  height: 30%;
+}
+.about__image {
+  height: 35%;
+}
+.about__text--header {
+  font-size: 2rem;
+}
+.about__text--paragraph {
+  font-size: 1rem;
 }
 
 .skills {
@@ -57,12 +72,13 @@ header {
   font-weight: 800;
 }
 .portfolio__card {
+  display: grid;
   width: 90%;
 }
-.portfolio__card--04, .portfolio__card--05, .portfolio__card--06 {
-  display: none;
+.portfolio__card__screenShot {
+  grid-area: "screenShot";
+  width: 100%;
 }
-
-.image {
-  height: 16.75rem;
+.portfolio__card__ .portfolio__card--04, .portfolio__card--05, .portfolio__card--06 {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */
