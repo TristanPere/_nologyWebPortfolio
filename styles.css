@@ -9,9 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 5%;
-  padding-right: 5%;
+  justify-content: space-between;
   height: 3785px;
 }
 
@@ -31,15 +29,18 @@ header {
 
 .jobTitle {
   flex-direction: column;
-  margin-top: 0cm;
+  justify-content: space-between;
+  width: 85%;
 }
 .jobTitle__title {
-  margin-bottom: 15%;
   font-size: 5rem;
 }
 .jobTitle__text {
   font-size: 1rem;
-  margin-top: 15%;
+}
+
+.about {
+  width: 85%;
 }
 
 .skills {
@@ -50,6 +51,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 85%;
 }
 .portfolio__header {
   font-weight: 800;
