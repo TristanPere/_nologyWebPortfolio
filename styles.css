@@ -64,40 +64,60 @@ header {
 
 .portfolio {
   display: grid;
-  grid-template-areas: "port01" "port02" "port03";
-  grid-template-rows: 0.1fr 1fr 2fr 1fr;
+  grid-template-areas: "portfolioTitle" "project01" "project02" "project03";
+  grid-template-rows: 0.1fr 1fr 1fr 1fr;
   width: 85%;
+  height: 30%;
 }
 .portfolio__header {
   font-weight: 800;
   font-size: 2rem;
-}
-.portfolio__card:nth-child(1) {
-  grid-area: "port01";
-}
-.portfolio__card:nth-child(2) {
-  grid-area: "port02";
-}
-.portfolio__card:nth-child(3) {
-  grid-area: "port03";
+  grid-area: "portfolioTitle";
 }
 .portfolio__card {
   display: grid;
+  grid-template-areas: "projectCardImage projectCardImage projectCardImage" "projectCardHead reactIcon scssIcon";
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-columns: 5fr 1fr;
   width: 90%;
 }
 .portfolio__card__screenShot {
-  grid-area: "port-screenShot";
+  grid-area: projectCardImage;
   width: 100%;
   height: 100%;
 }
+.portfolio__card__head {
+  font-size: 2rem;
+  font-weight: 400;
+  grid-area: projectCardHead;
+  display: flex;
+  align-items: center;
+}
 .portfolio__card__icon {
-  grid-area: "port-icon";
+  display: flex;
+  width: 80%;
+  height: 80%;
 }
 .portfolio__card__icon--react {
-  grid-area: "port-icon";
+  grid-area: reactIcon;
 }
-.portfolio__card--head {
-  grid-area: "port-head";
+.portfolio__card__icon--react__txt {
+  display: none;
+}
+.portfolio__card__icon--scss {
+  grid-area: scssIcon;
+}
+.portfolio__card__icon--scss__txt {
+  display: none;
+}
+.portfolio__card--01 {
+  grid-area: "project01";
+}
+.portfolio__card--02 {
+  grid-area: "project02";
+}
+.portfolio__card--03 {
+  grid-area: "project03";
 }
 .portfolio__card--04, .portfolio__card--05, .portfolio__card--06 {
   display: none;
