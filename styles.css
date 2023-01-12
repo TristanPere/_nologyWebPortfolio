@@ -65,7 +65,7 @@ header {
 .portfolio {
   display: grid;
   grid-template-areas: "portfolioTitle" "project01" "project02" "project03";
-  grid-template-rows: 0.1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.15fr 1fr 1fr 1fr;
   width: 85%;
   height: 30%;
 }
@@ -99,12 +99,16 @@ header {
   height: 80%;
 }
 .portfolio__card__icon--react {
+  display: flex;
+  align-items: center;
   grid-area: reactIcon;
 }
 .portfolio__card__icon--react__txt {
   display: none;
 }
 .portfolio__card__icon--scss {
+  display: flex;
+  align-items: center;
   grid-area: scssIcon;
 }
 .portfolio__card__icon--scss__txt {
@@ -121,4 +125,35 @@ header {
 }
 .portfolio__card--04, .portfolio__card--05, .portfolio__card--06 {
   display: none;
+}
+
+.getInTouch {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  height: 10%;
+}
+.getInTouch--title {
+  font-size: 5rem;
+  text-align: center;
+  font-weight: 400;
+}
+.getInTouch--button {
+  font-size: 1.125rem;
+  width: 85%;
+  color: black;
+  background: white;
+  padding: 15px 20px 15px 20px;
+  border: solid #000000 2px;
+}
+
+.footerLinks {
+  height: 3%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=styles.css.map */
