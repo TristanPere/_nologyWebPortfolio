@@ -5,19 +5,17 @@
     font-weight: 400;
     font-size: 1rem;
 }
-body{
+main{ 
     display: grid;
     grid-template-areas: 
-    'navBar'
     'jobTitle'
     'about'
     'skills'
     'portfolio'
-    'getInTouch'
-    'footerLinks';
-    grid-template-rows: 0.1fr 1fr 3fr 0fr 3fr 1fr 0.1fr;
+    'getInTouch';
+    grid-template-rows: 1fr 2.5fr 0fr 3fr 0.8fr;
     grid-template-columns: 1fr;
-    row-gap: 1%;
+    row-gap: 2%;
     margin: 3%;
 }
 
@@ -28,7 +26,7 @@ header{
 
 .navBar{
     justify-self: center;
-    grid-area: navBar;
+    // grid-area: navBar;
     &__name{  
     display: flex;
     justify-content: center;
@@ -55,19 +53,28 @@ header{
 
 .about{
     grid-area: about;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    // width: 85%;
-    // height: auto;
+    display: grid;
+    grid-template-areas: 
+    'about-header'
+    'about-image'
+    'about-paragraph';
+    grid-template-rows: 0.1fr 0.8fr 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 5%;
     &__image{
-        height: 40%;
+        grid-area: about-image;
+        width: 100%;
     }
     &__text{
+        grid-area: about-text;
+        display: flex;
         &--header{
+            grid-area: about-header;
+            align-self: flex-start;
             font-size: 2rem;
         }
         &--paragraph{
+            grid-area: about-paragraph;
             font-size: 1rem;
         }
     }
@@ -83,57 +90,52 @@ header{
     grid-area: portfolio;
     display: grid;
     grid-template-areas:
-    'portfolioTitle'
+    'portfolio-title'
     'project01'
     'project02'
     'project03';
     grid-template-rows: 0.15fr 1fr 1fr 1fr;
+    row-gap: 5%;
     &__header{
         font-weight: 800;
         font-size: 2rem;
-        grid-area: portfolioTitle;
+        grid-area: portfolio-title;
     }
 
     &__card{
         display: grid;
         grid-template-areas:
-        'projectCardImage projectCardImage projectCardImage'
-        'projectCardHead reactIcon scssIcon';
+        'project-image project-image project-image'
+        'project-header eye code-slash'
+        ;
         grid-template-columns: 3fr 1fr 1fr;
-        grid-template-columns: 5fr 1fr;
+        grid-template-rows: 3fr 1fr;
         width:100%;
         &__screenShot{
-            grid-area: projectCardImage;
+            grid-area: project-image;
             width: 100%;
             height: 100%;
         }
         &__head{
             font-size: 2rem;
             font-weight: 400;
-            grid-area: projectCardHead;
-            display: flex;
-            align-items: center;
+            grid-area: project-header;
+            align-self: center;
         }
-        &__icon{
+        &__eye{
+            grid-area: eye;
             display: flex;
-            width: 80%;
-            height: 80%;
-            &--react{
-                display: flex;
-                align-items: center;
-                grid-area: reactIcon;
-                &__txt{
-                    display: none;
-                }
-            }
-            &--scss{
-                display: flex;
-                align-items: center;
-                grid-area: scssIcon;
-                &__txt{
-                    display: none;
-                }
-            }
+            align-self: center;
+            justify-self: center;
+        }
+        &__code-slash{
+            grid-area: code-slash;
+            display: flex;
+            align-self: center;
+            justify-self: center;
+        }
+        &__RS{
+            display: none;
         }
 
         &--01{
@@ -156,26 +158,28 @@ header{
 
 .getInTouch{
     grid-area: getInTouch;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    // width: 85%;
-    // height: auto;
+    display: grid;
+    grid-template-areas: 
+    'contact-title'
+    'contact-button';
+    grid-template-rows: 1fr 1fr;
     &--title{
+        grid-area: contact-title;
         height: 100%;
         width: 100%;
-        font-size: 5rem;
         text-align: center;
+        font-size: 5rem;
         font-weight: 400;
-        margin-bottom:20%;
     }
     &--button{
+        grid-area: contact-button;
+        align-self: center;
+        justify-self: center;
         font-size: 1.125rem;
         width: 85%;
         color: black;
         background: white;
-        padding: 15px 20px 15px 20px;
+        padding: 15px 50px 15px 50px;
         border: solid #000000 2px;
 
     }
@@ -185,7 +189,6 @@ header{
 .footerLinks{
     justify-self: center;
     grid-area: footerLinks;
-    // height: 10vh;
     width: 100%;
     background-color: black;
     display: flex;
@@ -209,14 +212,14 @@ header{
 }
 
 @media screen and(min-width: 768px){
-    // body{
-    //     // min-height: 3495px;
-    // }
+    main{
+        margin: 0% 5%;
+        grid-template-rows: 0.2fr 1fr 0.5fr 1fr 0.8fr
+    }
     .navBar{
         display: flex;
         justify-content: space-between;
-        width: 85%;
-        // min-height: 58px;
+        margin: 0% 5% 10%;
         &__name{
             font-size: 3rem;
         }
@@ -225,26 +228,41 @@ header{
             width:30%;
             align-items: center;
             justify-content: center;
+            // &:hover{
+            //     font-weight: 10000;
+            // }
            }
-        }   
+        }  
+    .jobTitle{
+        &__text{
+            width: 40%;
+        }
+    } 
+    .about{
+        grid-template-areas: 
+        'about-header about-image'
+        'about-paragraph about-image';
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 0.2fr 1fr ;
+        align-items: center;
+        align-self: center;
+        &__text{
+            &--header{
+                align-self: center;
+            }
+        }
+    }
     .skills{
         display: grid;
         grid-template-areas: 
         'skillTxt'
         'skillIcon';
-        width:85%;
-        // height: auto;
         align-items: center;
         
         &__text{
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            // display: grid;
-            // grid-area: skillTxt;
-            // grid-template-areas: 
-            // 'skillHeader skillParagraph';
-            // grid-template-columns:  1fr 3fr;
             &--header{
                 justify-content: flex-start;
                 min-width: 20% ;
@@ -277,17 +295,37 @@ header{
     .portfolio{
         display: grid;
         grid-template-areas:
-        'portfolioTitle portfolioTitle portforlioTitle'
+        'portfolio-title portfolio-title portforlio-title'
         'project01 project02 project03'
         'project04 project05 project06';
         grid-template-rows: 0.15fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        
-        // min-height: 1469px;
+        grid-template-columns: 1.5fr 1.5fr 1.5fr;
+        column-gap: 3%;
 
-        // justify-content: space-between;
         &__card{
-            &__icon--scss__txt
+            grid-template-areas:
+            'project-image project-image project-image'
+            'project-header eye code-slash'
+            'reactSCSS eye code-slash'
+            ;
+            grid-template-columns: 3fr 1fr 1fr;
+            grid-template-rows: 3fr 1fr;
+            width:100%;
+
+            &__RS{
+                display: flex;
+                grid-area: reactSCSS;
+                justify-content: space-between;
+                width: 50%;
+            }
+            &__react{
+                font-size: 0.6rem;
+            }
+            &__scss{
+                font-size: 0.6rem;
+            }
+
+
             &--04,&--05,&--06{
                 display: grid;
             }
@@ -300,8 +338,20 @@ header{
             &--06{
                 grid-area: project06;
             }
+
+            
         }
-        
+    }
+    .getInTouch{
+        &--title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+        }
+        &--button{
+                width: 20%;
+        }
     }
 }
 

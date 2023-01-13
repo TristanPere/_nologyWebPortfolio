@@ -5,12 +5,12 @@
   font-size: 1rem;
 }
 
-body {
+main {
   display: grid;
-  grid-template-areas: "navBar" "jobTitle" "about" "skills" "portfolio" "getInTouch" "footerLinks";
-  grid-template-rows: 0.1fr 1fr 3fr 0fr 3fr 1fr 0.1fr;
+  grid-template-areas: "jobTitle" "about" "skills" "portfolio" "getInTouch";
+  grid-template-rows: 1fr 2.5fr 0fr 3fr 0.8fr;
   grid-template-columns: 1fr;
-  row-gap: 1%;
+  row-gap: 2%;
   margin: 3%;
 }
 
@@ -21,7 +21,6 @@ header {
 
 .navBar {
   justify-self: center;
-  grid-area: navBar;
 }
 .navBar__name {
   display: flex;
@@ -48,17 +47,27 @@ header {
 
 .about {
   grid-area: about;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-areas: "about-header" "about-image" "about-paragraph";
+  grid-template-rows: 0.1fr 0.8fr 1fr;
+  grid-template-columns: 1fr;
+  row-gap: 5%;
 }
 .about__image {
-  height: 40%;
+  grid-area: about-image;
+  width: 100%;
+}
+.about__text {
+  grid-area: about-text;
+  display: flex;
 }
 .about__text--header {
+  grid-area: about-header;
+  align-self: flex-start;
   font-size: 2rem;
 }
 .about__text--paragraph {
+  grid-area: about-paragraph;
   font-size: 1rem;
 }
 
@@ -70,52 +79,46 @@ header {
 .portfolio {
   grid-area: portfolio;
   display: grid;
-  grid-template-areas: "portfolioTitle" "project01" "project02" "project03";
+  grid-template-areas: "portfolio-title" "project01" "project02" "project03";
   grid-template-rows: 0.15fr 1fr 1fr 1fr;
+  row-gap: 5%;
 }
 .portfolio__header {
   font-weight: 800;
   font-size: 2rem;
-  grid-area: portfolioTitle;
+  grid-area: portfolio-title;
 }
 .portfolio__card {
   display: grid;
-  grid-template-areas: "projectCardImage projectCardImage projectCardImage" "projectCardHead reactIcon scssIcon";
+  grid-template-areas: "project-image project-image project-image" "project-header eye code-slash";
   grid-template-columns: 3fr 1fr 1fr;
-  grid-template-columns: 5fr 1fr;
+  grid-template-rows: 3fr 1fr;
   width: 100%;
 }
 .portfolio__card__screenShot {
-  grid-area: projectCardImage;
+  grid-area: project-image;
   width: 100%;
   height: 100%;
 }
 .portfolio__card__head {
   font-size: 2rem;
   font-weight: 400;
-  grid-area: projectCardHead;
+  grid-area: project-header;
+  align-self: center;
+}
+.portfolio__card__eye {
+  grid-area: eye;
   display: flex;
-  align-items: center;
+  align-self: center;
+  justify-self: center;
 }
-.portfolio__card__icon {
+.portfolio__card__code-slash {
+  grid-area: code-slash;
   display: flex;
-  width: 80%;
-  height: 80%;
+  align-self: center;
+  justify-self: center;
 }
-.portfolio__card__icon--react {
-  display: flex;
-  align-items: center;
-  grid-area: reactIcon;
-}
-.portfolio__card__icon--react__txt {
-  display: none;
-}
-.portfolio__card__icon--scss {
-  display: flex;
-  align-items: center;
-  grid-area: scssIcon;
-}
-.portfolio__card__icon--scss__txt {
+.portfolio__card__RS {
   display: none;
 }
 .portfolio__card--01 {
@@ -133,25 +136,27 @@ header {
 
 .getInTouch {
   grid-area: getInTouch;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-areas: "contact-title" "contact-button";
+  grid-template-rows: 1fr 1fr;
 }
 .getInTouch--title {
+  grid-area: contact-title;
   height: 100%;
   width: 100%;
-  font-size: 5rem;
   text-align: center;
+  font-size: 5rem;
   font-weight: 400;
-  margin-bottom: 20%;
 }
 .getInTouch--button {
+  grid-area: contact-button;
+  align-self: center;
+  justify-self: center;
   font-size: 1.125rem;
   width: 85%;
   color: black;
   background: white;
-  padding: 15px 20px 15px 20px;
+  padding: 15px 50px 15px 50px;
   border: solid #000000 2px;
 }
 
@@ -179,10 +184,14 @@ header {
 }
 
 @media screen and (min-width: 768px) {
+  main {
+    margin: 0% 5%;
+    grid-template-rows: 0.2fr 1fr 0.5fr 1fr 0.8fr;
+  }
   .navBar {
     display: flex;
     justify-content: space-between;
-    width: 85%;
+    margin: 0% 5% 10%;
   }
   .navBar__name {
     font-size: 3rem;
@@ -193,10 +202,22 @@ header {
     align-items: center;
     justify-content: center;
   }
+  .jobTitle__text {
+    width: 40%;
+  }
+  .about {
+    grid-template-areas: "about-header about-image" "about-paragraph about-image";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    align-items: center;
+    align-self: center;
+  }
+  .about__text--header {
+    align-self: center;
+  }
   .skills {
     display: grid;
     grid-template-areas: "skillTxt" "skillIcon";
-    width: 85%;
     align-items: center;
   }
   .skills__text {
@@ -232,11 +253,31 @@ header {
   }
   .portfolio {
     display: grid;
-    grid-template-areas: "portfolioTitle portfolioTitle portforlioTitle" "project01 project02 project03" "project04 project05 project06";
+    grid-template-areas: "portfolio-title portfolio-title portforlio-title" "project01 project02 project03" "project04 project05 project06";
     grid-template-rows: 0.15fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr;
+    -moz-column-gap: 3%;
+         column-gap: 3%;
   }
-  .portfolio__card__icon--scss__txt .portfolio__card--04, .portfolio__card--05, .portfolio__card--06 {
+  .portfolio__card {
+    grid-template-areas: "project-image project-image project-image" "project-header eye code-slash" "reactSCSS eye code-slash";
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    width: 100%;
+  }
+  .portfolio__card__RS {
+    display: flex;
+    grid-area: reactSCSS;
+    justify-content: space-between;
+    width: 50%;
+  }
+  .portfolio__card__react {
+    font-size: 0.6rem;
+  }
+  .portfolio__card__scss {
+    font-size: 0.6rem;
+  }
+  .portfolio__card--04, .portfolio__card--05, .portfolio__card--06 {
     display: grid;
   }
   .portfolio__card--04 {
@@ -247,5 +288,14 @@ header {
   }
   .portfolio__card--06 {
     grid-area: project06;
+  }
+  .getInTouch--title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+  }
+  .getInTouch--button {
+    width: 20%;
   }
 }/*# sourceMappingURL=styles.css.map */
