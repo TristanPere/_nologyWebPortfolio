@@ -10,7 +10,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 3785px;
 }
 
 header {
@@ -32,7 +31,6 @@ header {
   flex-direction: column;
   justify-content: space-between;
   width: 85%;
-  height: auto;
 }
 .jobTitle__title {
   font-size: 5rem;
@@ -46,7 +44,6 @@ header {
   flex-direction: column;
   justify-content: space-between;
   width: 85%;
-  height: auto;
 }
 .about__image {
   height: 40%;
@@ -67,12 +64,11 @@ header {
   grid-template-areas: "portfolioTitle" "project01" "project02" "project03";
   grid-template-rows: 0.15fr 1fr 1fr 1fr;
   width: 85%;
-  height: auto;
 }
 .portfolio__header {
   font-weight: 800;
   font-size: 2rem;
-  grid-area: "portfolioTitle";
+  grid-area: portfolioTitle;
 }
 .portfolio__card {
   display: grid;
@@ -115,13 +111,13 @@ header {
   display: none;
 }
 .portfolio__card--01 {
-  grid-area: "project01";
+  grid-area: project01;
 }
 .portfolio__card--02 {
-  grid-area: "project02";
+  grid-area: project02;
 }
 .portfolio__card--03 {
-  grid-area: "project03";
+  grid-area: project03;
 }
 .portfolio__card--04, .portfolio__card--05, .portfolio__card--06 {
   display: none;
@@ -133,7 +129,6 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 85%;
-  height: auto;
 }
 .getInTouch--title {
   height: 100%;
@@ -153,7 +148,6 @@ header {
 }
 
 .footerLinks {
-  height: 3%;
   width: 100%;
   background-color: black;
   display: flex;
@@ -179,7 +173,10 @@ header {
   .navBar {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 85%;
+  }
+  .navBar__name {
+    font-size: 3rem;
   }
   .navBar__button {
     display: flex;
@@ -188,13 +185,53 @@ header {
     justify-content: center;
   }
   .skills {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas: "skillTxt" "skillIcon";
+    width: 85%;
+    align-items: center;
   }
-  .skills__card {
+  .skills__text {
+    display: grid;
+    grid-area: skillTxt;
+    grid-template-areas: "skillHeader skillParagraph";
+    width: 100%;
+  }
+  .skills__text--header {
+    font-size: 3rem;
+    grid-area: skillHeader;
+  }
+  .skills__text--paragraph {
+    width: 100%;
+    grid-area: skillParagraph;
+  }
+  .skills__icon {
+    justify-self: center;
+    grid-area: skillIcon;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    width: 85%;
+  }
+  .skills__icon--box {
+    min-width: 90px;
+  }
+  .portfolio {
+    display: grid;
+    grid-template-areas: "portfolioTitle portfolioTitle portforlioTitle" "project01 project02 project03" "project04 project05 project06";
+    grid-template-rows: 0.15fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .portfolio__card--04, .portfolio__card--05, .portfolio__card--06 {
+    display: grid;
+  }
+  .portfolio__card--04 {
+    grid-area: project04;
+  }
+  .portfolio__card--05 {
+    grid-area: project05;
+  }
+  .portfolio__card--06 {
+    grid-area: project06;
   }
 }/*# sourceMappingURL=styles.css.map */

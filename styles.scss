@@ -10,7 +10,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 3785px;
+    // height: 3785px;
 }
 
 header{
@@ -35,7 +35,7 @@ header{
     flex-direction: column;
     justify-content: space-between;
     width:85%;
-    height: auto;
+    // height: auto;
     &__title{
         font-size: 5rem;
     }
@@ -49,7 +49,7 @@ header{
     flex-direction: column;
     justify-content: space-between;
     width: 85%;
-    height: auto;
+    // height: auto;
     &__image{
         height: 40%;
     }
@@ -71,18 +71,18 @@ header{
 .portfolio{
     display: grid;
     grid-template-areas:
-    "portfolioTitle"
-    "project01"
-    "project02"
-    "project03";
+    'portfolioTitle'
+    'project01'
+    'project02'
+    'project03';
     grid-template-rows: 0.15fr 1fr 1fr 1fr;
     // justify-content: space-between;
     width: 85%;
-    height: auto;
+    // height: auto;
     &__header{
         font-weight: 800;
         font-size: 2rem;
-        grid-area: "portfolioTitle"
+        grid-area: portfolioTitle;
     }
 
     &__card{
@@ -128,13 +128,13 @@ header{
         }
 
         &--01{
-            grid-area: "project01";
+            grid-area: project01;
         }
         &--02{
-            grid-area: "project02";
+            grid-area: project02;
         }
         &--03{
-            grid-area: "project03";
+            grid-area: project03;
         }
 
         &--04, &--05, &--06{
@@ -151,7 +151,7 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 85%;
-    height: auto;
+    // height: auto;
     &--title{
         height: 100%;
         width: 100%;
@@ -173,7 +173,7 @@ header{
 }
 
 .footerLinks{
-    height: 3%;
+    // height: 10vh;
     width: 100%;
     background-color: black;
     display: flex;
@@ -197,10 +197,17 @@ header{
 }
 
 @media screen and(min-width: 768px){
+    body{
+        // min-height: 3495px;
+    }
     .navBar{
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        width: 85%;
+        // min-height: 58px;
+        &__name{
+            font-size: 3rem;
+        }
         &__button{
             display: flex;
             width:30%;
@@ -209,19 +216,73 @@ header{
            }
         }   
     .skills{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-areas: 
+        'skillTxt'
+        'skillIcon';
+        width:85%;
+        // height: auto;
+        align-items: center;
+        
         &__text{
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            grid-area: skillTxt;
+            grid-template-areas: 
+            'skillHeader skillParagraph';
+            // grid-template-columns:  1fr 3fr;
+            width: 100%;
+            &--header{
+                font-size: 3rem;
+                grid-area: skillHeader;
+            }
+            &--paragraph{
+                width: 100%;
+                grid-area: skillParagraph;
+            }
         }
-        &__card{
+        &__icon{
+            justify-self: center;
+            grid-area: skillIcon;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
-            width:
+            width: 85%;
+  
+            &--box{
+                min-width: 90px;
+            }
         }
+    }
+
+    .portfolio{
+        display: grid;
+        grid-template-areas:
+        'portfolioTitle portfolioTitle portforlioTitle'
+        'project01 project02 project03'
+        'project04 project05 project06';
+        grid-template-rows: 0.15fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+        // min-height: 1469px;
+
+        // justify-content: space-between;
+        &__card{
+
+            &--04,&--05,&--06{
+                display: grid;
+            }
+            &--04{
+                grid-area: project04;
+            }
+            &--05{
+                grid-area: project05;
+            }
+            &--06{
+                grid-area: project06;
+            }
+        }
+        
     }
 }
 
