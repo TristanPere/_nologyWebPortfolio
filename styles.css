@@ -7,7 +7,7 @@
 
 main {
   display: grid;
-  grid-template-areas: "jobTitle" "about" "skills" "portfolio" "getInTouch";
+  grid-template-areas: "jobTitle" "about" "skills" "portfolio" "get-in-touch";
   grid-template-rows: 1fr 2.5fr 0fr 3fr 0.8fr;
   grid-template-columns: 1fr;
   row-gap: 2%;
@@ -134,13 +134,13 @@ header {
   display: none;
 }
 
-.getInTouch {
-  grid-area: getInTouch;
+.get-in-touch {
+  grid-area: get-in-touch;
   display: grid;
   grid-template-areas: "contact-title" "contact-button";
   grid-template-rows: 1fr 1fr;
 }
-.getInTouch--title {
+.get-in-touch--title {
   grid-area: contact-title;
   height: 100%;
   width: 100%;
@@ -148,7 +148,7 @@ header {
   font-size: 5rem;
   font-weight: 400;
 }
-.getInTouch--button {
+.get-in-touch--button {
   grid-area: contact-button;
   align-self: center;
   justify-self: center;
@@ -289,13 +289,13 @@ header {
   .portfolio__card--06 {
     grid-area: project06;
   }
-  .getInTouch--title {
+  .get-in-touch--title {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 8rem;
   }
-  .getInTouch--button {
+  .get-in-touch--button {
     width: 20%;
   }
 }/*# sourceMappingURL=styles.css.map */

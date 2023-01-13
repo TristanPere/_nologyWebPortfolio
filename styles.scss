@@ -12,7 +12,7 @@ main{
     'about'
     'skills'
     'portfolio'
-    'getInTouch';
+    'get-in-touch';
     grid-template-rows: 1fr 2.5fr 0fr 3fr 0.8fr;
     grid-template-columns: 1fr;
     row-gap: 2%;
@@ -156,8 +156,8 @@ header{
 }
 
 
-.getInTouch{
-    grid-area: getInTouch;
+.get-in-touch{
+    grid-area: get-in-touch;
     display: grid;
     grid-template-areas: 
     'contact-title'
@@ -342,7 +342,7 @@ header{
             
         }
     }
-    .getInTouch{
+    .get-in-touch{
         &--title{
             display: flex;
             align-items: center;
