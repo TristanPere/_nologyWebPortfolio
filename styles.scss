@@ -13,7 +13,7 @@ main{
     'skills'
     'portfolio'
     'get-in-touch';
-    grid-template-rows: 1fr 2.5fr 0fr 3fr 0.8fr;
+    grid-template-rows: 0.2fr 1fr 0fr 1.5fr 0.3fr;
     grid-template-columns: 1fr;
     row-gap: 2%;
     margin: 3%;
@@ -94,8 +94,8 @@ header{
     'project01'
     'project02'
     'project03';
-    grid-template-rows: 0.15fr 1fr 1fr 1fr;
-    row-gap: 5%;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr;
+    row-gap: 1%;
     &__header{
         font-weight: 800;
         font-size: 2rem;
@@ -109,12 +109,15 @@ header{
         'project-header eye code-slash'
         ;
         grid-template-columns: 3fr 1fr 1fr;
-        grid-template-rows: 3fr 1fr;
+        grid-template-rows: 1fr 0.2fr;
         width:100%;
         &__screenShot{
             grid-area: project-image;
             width: 100%;
-            height: 100%;
+            transition: all .2s ease-in-out;
+            &:hover{
+                transform: scale(1.01); 
+            }
         }
         &__head{
             font-size: 2rem;
@@ -127,17 +130,27 @@ header{
             display: flex;
             align-self: center;
             justify-self: center;
+            width: 60%;
+            transition: all .2s ease-in-out;
+            &:hover{
+                transform: scale(1.05); 
+            }
+
         }
         &__code-slash{
             grid-area: code-slash;
             display: flex;
             align-self: center;
             justify-self: center;
+            width: 60%;
+            transition: all .2s ease-in-out;
+            &:hover{
+                transform: scale(1.05); 
+            }
         }
         &__RS{
             display: none;
         }
-
         &--01{
             grid-area: project01;
         }
@@ -165,7 +178,6 @@ header{
     grid-template-rows: 1fr 1fr;
     &--title{
         grid-area: contact-title;
-        height: 100%;
         width: 100%;
         text-align: center;
         font-size: 5rem;
@@ -214,7 +226,7 @@ header{
 @media screen and(min-width: 768px){
     main{
         margin: 0% 5%;
-        grid-template-rows: 0.2fr 1fr 0.5fr 1fr 0.8fr
+        grid-template-rows: 0.2fr 0.8fr 0.5fr 0.8fr 0.8fr;
     }
     .navBar{
         display: flex;
@@ -225,19 +237,41 @@ header{
         }
         &__button{
             display: flex;
-            width:30%;
+            width: 30%;
             align-items: center;
-            justify-content: center;
-            // &:hover{
-            //     font-weight: 10000;
-            // }
+            justify-content: space-between;
+            
+            &--about{
+                text-decoration: none;
+                color: black;
+                &:hover{
+                    color: #3c3c3c;
+                }
+            }
+            &--contact{
+                text-decoration: none;
+                color: black;
+                &:hover{
+                    color: #3c3c3c;
+                }
+            }
+            &--portfolio{
+                text-decoration: none;
+                color: black;
+                &:hover{
+                    color: #3c3c3c;
+                }
+            }
            }
         }  
+
     .jobTitle{
         &__text{
+            margin-top: 5%;
             width: 40%;
         }
     } 
+
     .about{
         grid-template-areas: 
         'about-header about-image'

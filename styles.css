@@ -8,7 +8,7 @@
 main {
   display: grid;
   grid-template-areas: "jobTitle" "about" "skills" "portfolio" "get-in-touch";
-  grid-template-rows: 1fr 2.5fr 0fr 3fr 0.8fr;
+  grid-template-rows: 0.2fr 1fr 0fr 1.5fr 0.3fr;
   grid-template-columns: 1fr;
   row-gap: 2%;
   margin: 3%;
@@ -80,8 +80,8 @@ header {
   grid-area: portfolio;
   display: grid;
   grid-template-areas: "portfolio-title" "project01" "project02" "project03";
-  grid-template-rows: 0.15fr 1fr 1fr 1fr;
-  row-gap: 5%;
+  grid-template-rows: 0.1fr 1fr 1fr 1fr;
+  row-gap: 1%;
 }
 .portfolio__header {
   font-weight: 800;
@@ -92,13 +92,16 @@ header {
   display: grid;
   grid-template-areas: "project-image project-image project-image" "project-header eye code-slash";
   grid-template-columns: 3fr 1fr 1fr;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 1fr 0.2fr;
   width: 100%;
 }
 .portfolio__card__screenShot {
   grid-area: project-image;
   width: 100%;
-  height: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.portfolio__card__screenShot:hover {
+  transform: scale(1.01);
 }
 .portfolio__card__head {
   font-size: 2rem;
@@ -111,12 +114,22 @@ header {
   display: flex;
   align-self: center;
   justify-self: center;
+  width: 60%;
+  transition: all 0.2s ease-in-out;
+}
+.portfolio__card__eye:hover {
+  transform: scale(1.05);
 }
 .portfolio__card__code-slash {
   grid-area: code-slash;
   display: flex;
   align-self: center;
   justify-self: center;
+  width: 60%;
+  transition: all 0.2s ease-in-out;
+}
+.portfolio__card__code-slash:hover {
+  transform: scale(1.05);
 }
 .portfolio__card__RS {
   display: none;
@@ -142,7 +155,6 @@ header {
 }
 .get-in-touch--title {
   grid-area: contact-title;
-  height: 100%;
   width: 100%;
   text-align: center;
   font-size: 5rem;
@@ -186,7 +198,7 @@ header {
 @media screen and (min-width: 768px) {
   main {
     margin: 0% 5%;
-    grid-template-rows: 0.2fr 1fr 0.5fr 1fr 0.8fr;
+    grid-template-rows: 0.2fr 0.8fr 0.5fr 0.8fr 0.8fr;
   }
   .navBar {
     display: flex;
@@ -200,9 +212,31 @@ header {
     display: flex;
     width: 30%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+  }
+  .navBar__button--about {
+    text-decoration: none;
+    color: black;
+  }
+  .navBar__button--about:hover {
+    color: #3c3c3c;
+  }
+  .navBar__button--contact {
+    text-decoration: none;
+    color: black;
+  }
+  .navBar__button--contact:hover {
+    color: #3c3c3c;
+  }
+  .navBar__button--portfolio {
+    text-decoration: none;
+    color: black;
+  }
+  .navBar__button--portfolio:hover {
+    color: #3c3c3c;
   }
   .jobTitle__text {
+    margin-top: 5%;
     width: 40%;
   }
   .about {
