@@ -3,6 +3,8 @@
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1rem;
+  color: #ffffff;
+  background-color: #2c2a2a;
 }
 
 main {
@@ -84,9 +86,14 @@ header {
   row-gap: 1%;
 }
 .portfolio__header {
+  display: flex;
   font-weight: 800;
   font-size: 2rem;
   grid-area: portfolio-title;
+  align-items: flex-end;
+}
+.portfolio__header__img {
+  width: 3%;
 }
 .portfolio__card {
   display: grid;
@@ -172,33 +179,46 @@ header {
   border: solid #000000 2px;
 }
 
-.footerLinks {
-  justify-self: center;
-  grid-area: footerLinks;
+.footer-links {
+  grid-area: footer-links;
   width: 100%;
   background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.footerLinks__box {
+.footer-links__box {
   display: flex;
   justify-content: center;
+  background-color: black;
 }
-.footerLinks__box--linkedin {
+.footer-links__box--linkedin {
   margin: 5%;
 }
-.footerLinks__box--github {
+.footer-links__box--linkedin img {
+  background-color: black;
+  height: 100%;
+}
+.footer-links__box--github {
   margin: 5%;
 }
-.footerLinks__box--cv {
+.footer-links__box--github img {
+  background-color: black;
+  height: 100%;
+}
+.footer-links__box--cv {
   margin: 5%;
+}
+.footer-links__box--cv img {
+  background-color: black;
+  height: 100%;
 }
 
 @media screen and (min-width: 768px) {
   main {
     margin: 0% 5%;
     grid-template-rows: 0.2fr 0.8fr 0.5fr 0.8fr 0.8fr;
+    grid-template-columns: 10fr;
   }
   .navBar {
     display: flex;
@@ -216,24 +236,24 @@ header {
   }
   .navBar__button--about {
     text-decoration: none;
-    color: black;
+    color: #ffffff;
   }
   .navBar__button--about:hover {
-    color: #3c3c3c;
+    opacity: 0.5;
   }
   .navBar__button--contact {
     text-decoration: none;
-    color: black;
+    color: #ffffff;
   }
   .navBar__button--contact:hover {
-    color: #3c3c3c;
+    opacity: 0.5;
   }
   .navBar__button--portfolio {
     text-decoration: none;
-    color: black;
+    color: #ffffff;
   }
   .navBar__button--portfolio:hover {
-    color: #3c3c3c;
+    opacity: 0.5;
   }
   .jobTitle__text {
     margin-top: 5%;
@@ -330,6 +350,6 @@ header {
     font-size: 8rem;
   }
   .get-in-touch--button {
-    width: 20%;
+    width: 30%;
   }
 }/*# sourceMappingURL=styles.css.map */

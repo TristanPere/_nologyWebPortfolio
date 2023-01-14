@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant&family=Inter:wght@600&display=swap');
-
+$text-color-primary: #ffffff;
+$background-color-primary: #2c2a2a ;
 *{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+    color: $text-color-primary;
+    background-color: $background-color-primary;
+    
 }
 main{ 
     display: grid;
@@ -17,6 +21,7 @@ main{
     grid-template-columns: 1fr;
     row-gap: 2%;
     margin: 3%;
+    
 }
 
 header{
@@ -97,9 +102,14 @@ header{
     grid-template-rows: 0.1fr 1fr 1fr 1fr;
     row-gap: 1%;
     &__header{
+        display: flex;
         font-weight: 800;
         font-size: 2rem;
         grid-area: portfolio-title;
+        align-items: flex-end;
+        &__img{
+            width: 3%;
+        }
     }
 
     &__card{
@@ -198,25 +208,39 @@ header{
 
 }
 
-.footerLinks{
-    justify-self: center;
-    grid-area: footerLinks;
+.footer-links{
+    // justify-self: center;
+    grid-area: footer-links;
     width: 100%;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     &__box{
-        // width: 30%;
         display: flex;
         justify-content: center;
+        background-color: black;
         &--linkedin{
+            img {
+                background-color: black;
+                height: 100%;
+            }
+
             margin:5%;
         }
+
         &--github{
+            img {
+                background-color: black;
+                height: 100%;
+            }
             margin:5%;
         }
         &--cv{
+            img {
+                background-color: black;
+                height: 100%;
+            }
             margin:5%;
         }
 
@@ -227,6 +251,7 @@ header{
     main{
         margin: 0% 5%;
         grid-template-rows: 0.2fr 0.8fr 0.5fr 0.8fr 0.8fr;
+        grid-template-columns: 10fr;
     }
     .navBar{
         display: flex;
@@ -243,23 +268,23 @@ header{
             
             &--about{
                 text-decoration: none;
-                color: black;
+                color: $text-color-primary;
                 &:hover{
-                    color: #3c3c3c;
+                    opacity: 0.5;
                 }
             }
             &--contact{
                 text-decoration: none;
-                color: black;
+                color: $text-color-primary;
                 &:hover{
-                    color: #3c3c3c;
+                    opacity: 0.5;
                 }
             }
             &--portfolio{
                 text-decoration: none;
-                color: black;
+                color: $text-color-primary;
                 &:hover{
-                    color: #3c3c3c;
+                    opacity: 0.5;
                 }
             }
            }
@@ -384,7 +409,7 @@ header{
             font-size: 8rem;
         }
         &--button{
-                width: 20%;
+            width: 30%;
         }
     }
 }
