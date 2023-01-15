@@ -9,8 +9,8 @@
 
 main {
   display: grid;
-  grid-template-areas: "jobTitle" "about" "skills" "portfolio" "get-in-touch";
-  grid-template-rows: 0.2fr 1fr 0fr 1.5fr 0.3fr;
+  grid-template-areas: "jobTitle" "portfolio" "about" "skills" "collapsibles" "get-in-touch";
+  grid-template-rows: 0.2fr 1.5fr 1fr 0fr 1fr 0.3fr;
   grid-template-columns: 1fr;
   row-gap: 2%;
   margin: 3%;
@@ -21,15 +21,23 @@ header {
   font-weight: 700;
 }
 
-.navBar {
+.nav-bar {
   justify-self: center;
 }
-.navBar__name {
+.nav-bar__name {
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
 }
-.navBar__button {
+.nav-bar__surname {
+  font-family: "Cormorant", serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #D9BEA5;
+}
+.nav-bar__button {
   display: none;
 }
 
@@ -97,9 +105,9 @@ header {
 }
 .portfolio__card {
   display: grid;
-  grid-template-areas: "project-image project-image project-image" "project-header eye code-slash";
+  grid-template-areas: "project-image project-image project-image" "project-header eye code-slash" "reactSCSS eye code-slash";
   grid-template-columns: 3fr 1fr 1fr;
-  grid-template-rows: 1fr 0.2fr;
+  grid-template-rows: 3fr 1fr;
   width: 100%;
 }
 .portfolio__card__screenShot {
@@ -139,7 +147,20 @@ header {
   transform: scale(1.05);
 }
 .portfolio__card__RS {
-  display: none;
+  display: flex;
+  grid-area: reactSCSS;
+  justify-content: space-between;
+  width: 50%;
+}
+.portfolio__card__react {
+  font-size: 0.6rem;
+  background-color: #3C3636;
+  margin: 5%;
+}
+.portfolio__card__scss {
+  font-size: 0.6rem;
+  margin: 5%;
+  background-color: #3C3636;
 }
 .portfolio__card--01 {
   grid-area: project01;
@@ -152,6 +173,19 @@ header {
 }
 .portfolio__card--04, .portfolio__card--05, .portfolio__card--06 {
   display: none;
+}
+
+.collapsibles {
+  grid-area: collapsibles;
+  display: flex;
+}
+.collapsibles__experience {
+  display: flex;
+  flex-direction: column;
+}
+.collapsibles__interests {
+  display: flex;
+  flex-direction: column;
 }
 
 .get-in-touch {
@@ -220,39 +254,42 @@ header {
     grid-template-rows: 0.2fr 0.8fr 0.5fr 0.8fr 0.8fr;
     grid-template-columns: 10fr;
   }
-  .navBar {
+  .nav-bar {
     display: flex;
     justify-content: space-between;
     margin: 0% 5% 10%;
   }
-  .navBar__name {
+  .nav-bar__name {
     font-size: 3rem;
   }
-  .navBar__button {
+  .nav-bar__surname {
+    font-size: 3rem;
+  }
+  .nav-bar__button {
     display: flex;
     width: 30%;
     align-items: center;
     justify-content: space-between;
   }
-  .navBar__button--about {
+  .nav-bar__button--about {
     text-decoration: none;
     color: #ffffff;
   }
-  .navBar__button--about:hover {
+  .nav-bar__button--about:hover {
     opacity: 0.5;
   }
-  .navBar__button--contact {
+  .nav-bar__button--contact {
     text-decoration: none;
     color: #ffffff;
   }
-  .navBar__button--contact:hover {
+  .nav-bar__button--contact:hover {
     opacity: 0.5;
   }
-  .navBar__button--portfolio {
+  .nav-bar__button--portfolio {
     text-decoration: none;
     color: #ffffff;
   }
-  .navBar__button--portfolio:hover {
+  .nav-bar__button--portfolio:hover {
     opacity: 0.5;
   }
   .jobTitle__text {
@@ -318,18 +355,6 @@ header {
     grid-template-columns: 3fr 1fr 1fr;
     grid-template-rows: 3fr 1fr;
     width: 100%;
-  }
-  .portfolio__card__RS {
-    display: flex;
-    grid-area: reactSCSS;
-    justify-content: space-between;
-    width: 50%;
-  }
-  .portfolio__card__react {
-    font-size: 0.6rem;
-  }
-  .portfolio__card__scss {
-    font-size: 0.6rem;
   }
   .portfolio__card--04, .portfolio__card--05, .portfolio__card--06 {
     display: grid;

@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav class="navBar">
-      <!-- can i set two classes for each header so the can all have the same font? -->
-      <header class="navBar__name">Tristan Peregrine</header>
-      <div class="navBar__button">
-        <a href="#about" class="navBar__button--about">About</a>
-        <a href="#portfolio" class="navBar__button--portfolio">Porfolio</a>
-        <a href="#get-in-touch" class="navBar__button--contact">Contact</a>
+    <nav class="nav-bar">
+      <header class="nav-bar__name">Tristan&nbsp; <span class="nav-bar__surname">Peregrine.</span></header>
+      <div class="nav-bar__button">
+        <a href="#about" class="nav-bar__button--about">About</a>
+        <a href="#portfolio" class="nav-bar__button--portfolio">Porfolio</a>
+        <a href="#get-in-touch" class="nav-bar__button--contact">Contact</a>
       </div>
+      <button class="nav-bar__options"></button>
     </nav>
     <main>
       <header class="jobTitle">
@@ -118,12 +118,12 @@
           </header>
           <img
             class="portfolio__card__eye portfolio__card__eye--img01"
-            src="./images/ReactEye.png"
+            src="./images/ReactEye-dark.png"
             alt="React"
           />
           <img
             class="portfolio__card__code-slash portfolio__card__code-slash--img01"
-            src="./images/Code-Slash.png"
+            src="./images/Code-Slash-dark.png"
             alt="SCSS"
           />
           <div class="portfolio__card__RS">
@@ -145,12 +145,12 @@
           </header>
           <img
             class="portfolio__card__eye portfolio__card__eye--img02"
-            src="./images/ReactEye.png"
+            src="./images/ReactEye-dark.png"
             alt="React"
           />
           <img
             class="portfolio__card__code-slash portfolio__card__code-slash--img02"
-            src="./images/Code-Slash.png"
+            src="./images/Code-Slash-dark.png"
             alt="SCSS"
           />
           <div class="portfolio__card__RS">
@@ -172,12 +172,12 @@
           </header>
           <img
             class="portfolio__card__eye portfolio__card__eye--img03"
-            src="./images/ReactEye.png"
+            src="./images/ReactEye-dark.png"
             alt="React"
           />
           <img
             class="portfolio__card__code-slash portfolio__card__code-slash--img03"
-            src="./images/Code-Slash.png"
+            src="./images/Code-Slash-dark.png"
             alt="SCSS"
           />
           <div class="portfolio__card__RS">
@@ -199,12 +199,12 @@
           </header>
           <img
             class="portfolio__card__eye portfolio__card__eye--img04"
-            src="./images/ReactEye.png"
+            src="./images/ReactEye-dark.png"
             alt="React"
           />
           <img
             class="portfolio__card__code-slash portfolio__card__code-slash--img04"
-            src="./images/Code-Slash.png"
+            src="./images/Code-Slash-dark.png"
             alt="SCSS"
           />
           <div class="portfolio__card__RS">
@@ -226,12 +226,12 @@
           </header>
           <img
             class="portfolio__card__eye portfolio__card__eye--img05"
-            src="./images/ReactEye.png"
+            src="./images/ReactEye-dark.png"
             alt="React"
           />
           <img
             class="portfolio__card__code-slash portfolio__card__code-slash--img05"
-            src="./images/Code-Slash.png"
+            src="./images/Code-Slash-dark.png"
             alt="SCSS"
           />
           <div class="portfolio__card__RS">
@@ -253,12 +253,12 @@
           </header>
           <img
             class="portfolio__card__eye portfolio__card__eye--img06"
-            src="./images/ReactEye.png"
+            src="./images/ReactEye-dark.png"
             alt="React"
           />
           <img
             class="portfolio__card__code-slash portfolio__card__code-slash--img06"
-            src="./images/Code-Slash.png"
+            src="./images/Code-Slash-dark.png"
             alt="SCSS"
           />
           <div class="portfolio__card__RS">
@@ -268,6 +268,20 @@
             <a class="portfolio__card__scss portfolio__card__scss--06">SCSS</a>
           </div>
         </div>
+      </div>
+
+      <div class="collapsibles">
+        <div class="experience">
+          <button class="experience__collapsible--01">Trainee Software Developer @ Nology</button>
+          <button class="experience__collapsible--02">Experience 2 @ work</button>
+          <button class="experience__collapsible--03">Experience 3 @ work</button>
+        </div>
+        <div class="interest">
+          <button class="interests__collapsible--01">Cycling</button>
+          <button class="interests__collapsible--02">Cooking</button>
+          <button class="interests__collapsible--03">Interest 3</button>
+        </div>
+
       </div>
 
       <div id="get-in-touch" class="get-in-touch">
