@@ -3,6 +3,7 @@ $text-color-primary: #ffffff;
 $text-color-secondary: #D9BEA5;
 $background-color-primary: #2c2a2a;
 $background-color-secondary: #3C3636;
+
 *{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -18,9 +19,8 @@ main{
     'portfolio'
     'about'
     'skills'
-    // 'collapsibles'
     'get-in-touch';
-    grid-template-rows: 0.2fr 1.5fr 1fr 0fr 0.3fr;
+    grid-template-rows: 0.2fr 1.5fr 1fr 0.1fr 0.3fr;
     grid-template-columns: 1fr;
     row-gap: 1%;
     margin: 3%;
@@ -31,25 +31,6 @@ header{
     font-family: 'Cormorant', serif;
     font-weight: 700;
 }
-
-// h1 {
-//     font-weight: 300;
-//     display: inline-block;
-//     padding-bottom: 5px;
-//     position: relative;
-//   }
-//   h1:before{
-//       content: "";
-//       position: absolute;
-//       width: 50%;
-//       height: 1px;
-//       bottom: 0;
-//       left: 25%;
-//       border-bottom: 1px solid red;
-//   }
-
-
-
 
 .nav-bar{
     display: flex;
@@ -227,20 +208,6 @@ header{
 
 }
 
-// .collapsibles{
-//     grid-area: collapsibles;
-//     display: flex;
-//     &__experience{
-//         display: flex;
-//         flex-direction: column;
-//     }
-//     &__interests{
-//         display: flex;
-//         flex-direction: column;
-
-//     }
-// }
-
 .get-in-touch{
     grid-area: get-in-touch;
     display: grid;
@@ -312,11 +279,11 @@ header{
 @media screen and(min-width: 768px){
     main{
         margin: 0% 5%;
-        grid-template-rows: 0.2fr 0.8fr 0.5fr 0.8fr 0.8fr;
+        grid-template-rows: 0.3fr 0.8fr 0.6fr 0.5fr 0.5fr ;
         grid-template-columns: 10fr;
     }
     .nav-bar{
-        margin: 0% 5% 10%;
+        margin: 0% 5% 5%;
 
         &__name{
             font-size: 3rem;
@@ -358,7 +325,7 @@ header{
         }  
     .jobTitle{
         &__text{
-            margin-top: 5%;
+            margin: 5% 0 5% 0;
             width: 40%;
         }
     } 
