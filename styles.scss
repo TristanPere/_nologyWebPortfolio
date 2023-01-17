@@ -12,28 +12,6 @@ $background-color-secondary: #3C3636;
     background-color: $background-color-primary;
     
 }
-main{ 
-    display: grid;
-    grid-template-areas: 
-    'jobTitle'
-    'portfolio'
-    'about'
-    'skills'
-    'get-in-touch';
-    grid-template-rows: 0.2fr 1.5fr 1fr 0.1fr 0.3fr;
-    grid-template-columns: 1fr;
-    row-gap: 1%;
-    margin: 3%;
-    
-}
-
-header{
-    font-family: 'Cormorant', serif;
-    font-weight: 700;
-}
-
-
-
 .nav-bar{
     display: flex;
     justify-content: space-between;
@@ -56,6 +34,24 @@ header{
     &__options{
         border: 0px;
     }
+}
+main{ 
+    display: grid;
+    grid-template-areas: 
+    'jobTitle'
+    'portfolio'
+    'about'
+    'skills'
+    'get-in-touch';
+    grid-template-rows: 0.3fr 2fr 1.2fr 0fr 0.4fr;
+    grid-template-columns: 1fr;
+    row-gap: 1%;
+    margin: 3%;
+    
+}
+header{
+    font-family: 'Cormorant', serif;
+    font-weight: 700;
 }
 
 .jobTitle{
@@ -135,8 +131,8 @@ header{
         'project-header eye code-slash'
         'reactSCSS reactSCSS reactSCSS'
         ;
-        grid-template-columns: 3.2fr 1fr 1fr;
-        grid-template-rows: 3.2fr 1fr;
+        grid-template-columns: 3fr 1fr 1fr;
+        grid-template-rows: 2.7fr 0.8fr 0.2fr;
         width:100%;
         &__screenShot{
             grid-area: project-image;
@@ -281,8 +277,9 @@ header{
 @media screen and(min-width: 768px){
     main{
         margin: 0% 5%;
-        grid-template-rows: 0.3fr 0.8fr 0.6fr 0.5fr 0.5fr ;
+        grid-template-rows: 0.3fr 3fr 1.4fr 1fr 1fr ;
         grid-template-columns: 10fr;
+        row-gap: 2%;
     }
     .nav-bar{
         margin: 0% 5% 5%;
@@ -295,10 +292,12 @@ header{
         }
         &__button{
             display: flex;
-            width: 30%;
+            width: 20%;
             align-items: center;
             justify-content: space-between;
-            
+            &--about, &--contact, &--portfolio{
+                margin: 0% 0% 0% 5%;
+            }
             &--about{
                 text-decoration: none;
                 color: $text-color-primary;
@@ -327,7 +326,7 @@ header{
         }  
     .jobTitle{
         &__text{
-            margin: 5% 0 5% 0;
+            margin: 5% 0 0% 0;
             width: 40%;
         }
     } 
@@ -392,28 +391,52 @@ header{
         'project04 project05 project06';
         grid-template-rows: 0.15fr 1fr 1fr;
         grid-template-columns: 1.5fr 1.5fr 1.5fr;
-        column-gap: 3%;
+        column-gap: 2%;
         row-gap: 3%;
 
         &__card{
+
+            // &__imgcontainer {
+            //     position: relative;
+            //   }
+            //   }
+            // &__overlay {
+            //     position: absolute;
+            //     top: 0;
+            //     bottom: 0;
+            //     left: 0;
+            //     right: 0;
+            //     opacity: 0;
+            //     transition: .5s ease;
+            //     background-color: #008CBA;
+            //   }
+            //   &__imgcontainer:hover .portfolio__card__overlay {
+            //     opacity: 1;
+            //   }
+            //   &__text {
+            //     color: white;
+            //     font-size: 20px;
+            //     position: absolute;
+            //     top: 50%;
+            //     left: 50%;
+            //     -webkit-transform: translate(-50%, -50%);
+            //     -ms-transform: translate(-50%, -50%);
+            //     transform: translate(-50%, -50%);
+            //     text-align: center;
+            //   }
+
             &__RS{
                 width: 100%;
             }
-            &__react{
+            &__react, &__scss{
                 font-size: 0.6rem;
                 background-color: $background-color-secondary;
                 border: 0px;
                 width: 15%;
             }
             &__scss{
-                font-size: 0.6rem;
-                background-color: $background-color-secondary;
-                border: 0px;
-                width: 15%;
                 margin: 0 0 0 1%;
             }
-
-
             &--04,&--05,&--06{
                 display: grid;
             }
@@ -426,8 +449,6 @@ header{
             &--06{
                 grid-area: project06;
             }
-
-            
         }
     }
     .get-in-touch{

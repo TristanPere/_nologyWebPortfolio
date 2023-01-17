@@ -7,20 +7,6 @@
   background-color: #2c2a2a;
 }
 
-main {
-  display: grid;
-  grid-template-areas: "jobTitle" "portfolio" "about" "skills" "get-in-touch";
-  grid-template-rows: 0.2fr 1.5fr 1fr 0.1fr 0.3fr;
-  grid-template-columns: 1fr;
-  row-gap: 1%;
-  margin: 3%;
-}
-
-header {
-  font-family: "Cormorant", serif;
-  font-weight: 700;
-}
-
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -43,6 +29,20 @@ header {
 }
 .nav-bar__options {
   border: 0px;
+}
+
+main {
+  display: grid;
+  grid-template-areas: "jobTitle" "portfolio" "about" "skills" "get-in-touch";
+  grid-template-rows: 0.3fr 2fr 1.2fr 0fr 0.4fr;
+  grid-template-columns: 1fr;
+  row-gap: 1%;
+  margin: 3%;
+}
+
+header {
+  font-family: "Cormorant", serif;
+  font-weight: 700;
 }
 
 .jobTitle {
@@ -96,7 +96,7 @@ header {
   display: grid;
   grid-template-areas: "portfolio-title" "project01" "project02" "project03";
   grid-template-rows: 0.1fr 1fr 1fr 1fr;
-  row-gap: 1%;
+  row-gap: 3%;
 }
 .portfolio__header {
   display: flex;
@@ -111,8 +111,8 @@ header {
 .portfolio__card {
   display: grid;
   grid-template-areas: "project-image project-image project-image" "project-header eye code-slash" "reactSCSS reactSCSS reactSCSS";
-  grid-template-columns: 3.2fr 1fr 1fr;
-  grid-template-rows: 3.2fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-rows: 2.7fr 0.8fr 0.2fr;
   width: 100%;
 }
 .portfolio__card__screenShot {
@@ -245,8 +245,9 @@ header {
 @media screen and (min-width: 768px) {
   main {
     margin: 0% 5%;
-    grid-template-rows: 0.3fr 0.8fr 0.6fr 0.5fr 0.5fr;
+    grid-template-rows: 0.3fr 3fr 1.4fr 1fr 1fr;
     grid-template-columns: 10fr;
+    row-gap: 2%;
   }
   .nav-bar {
     margin: 0% 5% 5%;
@@ -259,9 +260,12 @@ header {
   }
   .nav-bar__button {
     display: flex;
-    width: 30%;
+    width: 20%;
     align-items: center;
     justify-content: space-between;
+  }
+  .nav-bar__button--about, .nav-bar__button--contact, .nav-bar__button--portfolio {
+    margin: 0% 0% 0% 5%;
   }
   .nav-bar__button--about {
     text-decoration: none;
@@ -288,7 +292,7 @@ header {
     display: none;
   }
   .jobTitle__text {
-    margin: 5% 0 5% 0;
+    margin: 5% 0 0% 0;
     width: 40%;
   }
   .about {
@@ -342,23 +346,20 @@ header {
     grid-template-areas: "portfolio-title portfolio-title portforlio-title" "project01 project02 project03" "project04 project05 project06";
     grid-template-rows: 0.15fr 1fr 1fr;
     grid-template-columns: 1.5fr 1.5fr 1.5fr;
-    -moz-column-gap: 3%;
-         column-gap: 3%;
+    -moz-column-gap: 2%;
+         column-gap: 2%;
+    row-gap: 3%;
   }
   .portfolio__card__RS {
     width: 100%;
   }
-  .portfolio__card__react {
+  .portfolio__card__react, .portfolio__card__scss {
     font-size: 0.6rem;
     background-color: #3C3636;
     border: 0px;
     width: 15%;
   }
   .portfolio__card__scss {
-    font-size: 0.6rem;
-    background-color: #3C3636;
-    border: 0px;
-    width: 15%;
     margin: 0 0 0 1%;
   }
   .portfolio__card--04, .portfolio__card--05, .portfolio__card--06 {
