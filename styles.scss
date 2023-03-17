@@ -1,466 +1,463 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant&family=Inter:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant&family=Inter:wght@600&display=swap");
 $text-color-primary: #ffffff;
-$text-color-secondary: #D9BEA5;
+$text-color-secondary: #d9bea5;
 $background-color-primary: #2c2a2a;
-$background-color-secondary: #3C3636;
+$background-color-secondary: #3c3636;
 
-*{
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    color: $text-color-primary;
-    background-color: $background-color-primary;
-    
+* {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: $text-color-primary;
+  background-color: $background-color-primary;
 }
-.nav-bar{
-    display: flex;
-    justify-content: space-between;
-    &__name{  
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  &__name {
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
-    }
-    &__surname{
-        font-family: 'Cormorant', serif;
-        font-weight: 700;
-        display: flex;
-        justify-content: center;
-        font-size: 1.5rem;
-        color: $text-color-secondary;
-    }
-    &__button{
-        display: none;
-    }
-    &__options{
-        border: 0px;
-    }
-}
-main{ 
-    display: grid;
-    grid-template-areas: 
-    'jobTitle'
-    'portfolio'
-    'about'
-    'skills'
-    'get-in-touch';
-    grid-template-rows: 0.3fr 2fr 1.2fr 0fr 0.4fr;
-    grid-template-columns: 1fr;
-    row-gap: 1%;
-    margin: 3%;
-    
-}
-header{
-    font-family: 'Cormorant', serif;
+  }
+  &__surname {
+    font-family: "Cormorant", serif;
     font-weight: 700;
-}
-
-.jobTitle{
-    justify-self: center;
-    grid-area: jobTitle;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    &__title{
-        font-size: 5rem;
-    }
-    &__text{
-        font-size: 1rem;
-        text-decoration: none;
-    }
+    justify-content: center;
+    font-size: 1.5rem;
+    color: $text-color-secondary;
+  }
+  &__button {
+    display: none;
+  }
+  &__options {
+    border: 0px;
+  }
+}
+main {
+  display: grid;
+  grid-template-areas:
+    "jobTitle"
+    "portfolio"
+    "about"
+    "skills"
+    "get-in-touch";
+  grid-template-rows: 0.3fr 2fr 1.2fr 0fr 0.4fr;
+  grid-template-columns: 1fr;
+  row-gap: 1%;
+  margin: 3%;
+}
+header {
+  font-family: "Cormorant", serif;
+  font-weight: 700;
 }
 
-.about{
-    grid-area: about;
-    display: grid;
-    grid-template-areas: 
-    'about-header'
-    'about-image'
-    'about-paragraph';
-    grid-template-rows: 0.1fr 0.8fr 1fr;
-    grid-template-columns: 1fr;
-    row-gap: 5%;
-    &__image{
-        grid-area: about-image;
-        width: 100%;
-    }
-    &__text{
-        grid-area: about-text;
-        display: flex;
-        &--header{
-            grid-area: about-header;
-            align-self: flex-start;
-            font-size: 2rem;
-        }
-        &--paragraph{
-            grid-area: about-paragraph;
-            font-size: 1rem;
-        }
-    }
+.jobTitle {
+  justify-self: center;
+  grid-area: jobTitle;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__title {
+    font-size: 5rem;
+  }
+  &__text {
+    font-size: 1rem;
+    text-decoration: none;
+  }
 }
 
-.skills{
-    grid-area: skills;
-    display: none;  
+.about {
+  grid-area: about;
+  display: grid;
+  grid-template-areas:
+    "about-header"
+    "about-image"
+    "about-paragraph";
+  grid-template-rows: 0.1fr 0.8fr 1fr;
+  grid-template-columns: 1fr;
+  row-gap: 5%;
+  &__image {
+    grid-area: about-image;
+    width: 100%;
+  }
+  &__text {
+    grid-area: about-text;
+    display: flex;
+    &--header {
+      grid-area: about-header;
+      align-self: flex-start;
+      font-size: 2rem;
+    }
+    &--paragraph {
+      grid-area: about-paragraph;
+      font-size: 1rem;
+    }
+  }
 }
 
-.portfolio{
-    grid-area: portfolio;
+.skills {
+  grid-area: skills;
+  display: none;
+}
+
+.portfolio {
+  grid-area: portfolio;
+  display: grid;
+  grid-template-areas:
+    "portfolio-title"
+    "project01"
+    "project02"
+    "project03";
+  grid-template-rows: 0.1fr fr 1fr 1fr;
+  row-gap: 3%;
+  &__header {
+    display: flex;
+    font-weight: 800;
+    font-size: 2rem;
+    grid-area: portfolio-title;
+    align-items: flex-end;
+    &__img {
+      width: 3%;
+    }
+  }
+  &__card {
     display: grid;
     grid-template-areas:
-    'portfolio-title'
-    'project01'
-    'project02'
-    'project03';
-    grid-template-rows: 0.1fr 1fr 1fr 1fr;
-    row-gap: 3%;
-    &__header{
-        display: flex;
-        font-weight: 800;
-        font-size: 2rem;
-        grid-area: portfolio-title;
-        align-items: flex-end;
-        &__img{
-            width: 3%;
-        }
-    }
-    &__card{
-        display: grid;
-        grid-template-areas:
-        'project-image project-image project-image'
-        'project-header eye code-slash'
-        'reactSCSS reactSCSS reactSCSS'
-        ;
-        grid-template-columns: 3fr 1fr 1fr;
-        grid-template-rows: 2.7fr 0.8fr 0.2fr;
-        width:100%;
-        &__screenShot{
-            grid-area: project-image;
-            height: 100%;
-            width: 100%;
-            transition: all .2s ease-in-out;
-            &:hover{
-                transform: scale(1.01); 
-            }
-        }
-        &__head{
-            font-size: 2rem;
-            font-weight: 400;
-            grid-area: project-header;
-            align-self: center;
-        }
-        &__eye{
-            grid-area: eye;
-            display: flex;
-            flex-direction: column;
-            align-self: center;
-            justify-self: center;
-            width: 60%;
-            transition: all .2s ease-in-out;
-            &:hover{
-                transform: scale(1.05); 
-            }
-
-        }
-        &__code-slash{
-            grid-area: code-slash;
-            display: flex;
-            align-self: center;
-            justify-self: center;
-            width: 60%;
-            transition: all .2s ease-in-out;
-            &:hover{
-                transform: scale(1.05); 
-            }
-        }
-        &__RS{
-            display: flex;
-            grid-area: reactSCSS;
-            justify-content: flex-start;
-            width: 50%;
-        }
-        &__react{
-            font-size: 0.6rem;
-            background-color: $background-color-secondary;
-            border: 0px;
-        }
-        &__scss{
-            font-size: 0.6rem;
-            background-color: $background-color-secondary;
-            border: 0px;
-            margin: 0 0 0 2%;
-        }
-        &--01{
-            grid-area: project01;
-        }
-        &--02{
-            grid-area: project02;
-        }
-        &--03{
-            grid-area: project03;
-        }
-
-        &--04, &--05, &--06{
-            display: none;
-        }
-    }
-
-}
-
-.get-in-touch{
-    grid-area: get-in-touch;
-    display: grid;
-    grid-template-areas: 
-    'contact-title'
-    'contact-button';
-    grid-template-rows: 1fr 1fr;
-    &--title{
-        grid-area: contact-title;
-        width: 100%;
-        text-align: center;
-        font-size: 5rem;
-        font-weight: 400;
-    }
-    &--button{
-        grid-area: contact-button;
-        align-self: center;
-        justify-self: center;
-        font-size: 1.125rem;
-        width: 85%;
-        color: black;
-        background: white;
-        padding: 15px 50px 15px 50px;
-        border: solid #000000 2px;
-
-    }
-
-}
-
-.footer-links{
-    // justify-self: center;
-    grid-area: footer-links;
+      "project-image project-image project-image"
+      "project-header eye code-slash"
+      "reactSCSS reactSCSS reactSCSS";
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 1fr 0.2fr 0.1fr;
     width: 100%;
-    background-color: black;
+    &__screenShot {
+      grid-area: project-image;
+      // object-fit: contain;
+      height: 100%;
+      width: 100%;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+    &__head {
+      font-size: 2rem;
+      font-weight: 400;
+      grid-area: project-header;
+      align-self: center;
+    }
+    &__eye {
+      grid-area: eye;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      justify-self: center;
+      width: 60%;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    &__code-slash {
+      grid-area: code-slash;
+      display: flex;
+      align-self: center;
+      justify-self: center;
+      width: 60%;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    &__RS {
+      display: flex;
+      grid-area: reactSCSS;
+      justify-content: flex-start;
+      width: 50%;
+    }
+    &__react {
+      font-size: 0.6rem;
+      background-color: $background-color-secondary;
+      border: 0px;
+    }
+    &__scss {
+      font-size: 0.6rem;
+      background-color: $background-color-secondary;
+      border: 0px;
+      margin: 0 0 0 2%;
+    }
+    &--01 {
+      grid-area: project01;
+    }
+    &--02 {
+      grid-area: project02;
+    }
+    &--03 {
+      grid-area: project03;
+    }
+
+    &--04,
+    &--05,
+    &--06 {
+      display: none;
+    }
+  }
+}
+
+.get-in-touch {
+  grid-area: get-in-touch;
+  display: grid;
+  grid-template-areas:
+    "contact-title"
+    "contact-button";
+  grid-template-rows: 1fr 1fr;
+  &--title {
+    grid-area: contact-title;
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 400;
+  }
+  &--button {
+    grid-area: contact-button;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.125rem;
+    width: 85%;
+    color: black;
+    background: white;
+    padding: 15px 50px 15px 50px;
+    border: solid #000000 2px;
+  }
+}
+
+.footer-links {
+  // justify-self: center;
+  grid-area: footer-links;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__box {
     display: flex;
-    align-items: center;
     justify-content: center;
-    &__box{
-        display: flex;
-        justify-content: center;
+    background-color: black;
+    &--linkedin {
+      img {
         background-color: black;
-        &--linkedin{
-            img {
-                background-color: black;
-                height: 100%;
-            }
+        height: 100%;
+      }
 
-            margin:5%;
-        }
-
-        &--github{
-            img {
-                background-color: black;
-                height: 100%;
-            }
-            margin:5%;
-        }
-        &--cv{
-            img {
-                background-color: black;
-                height: 100%;
-            }
-            margin:5%;
-        }
-
+      margin: 5%;
     }
+
+    &--github {
+      img {
+        background-color: black;
+        height: 100%;
+      }
+      margin: 5%;
+    }
+    &--cv {
+      img {
+        background-color: black;
+        height: 100%;
+      }
+      margin: 5%;
+    }
+  }
 }
 
-@media screen and (min-width: 768px){
-    main{
-        margin: 0% 5%;
-        grid-template-rows: 0.3fr 3fr 1.4fr 1fr 1fr ;
-        grid-template-columns: 10fr;
-        row-gap: 2%;
-    }
-    .nav-bar{
-        margin: 0% 5% 5%;
+@media screen and (min-width: 768px) {
+  main {
+    margin: 0% 5%;
+    grid-template-rows: 0.3fr 3fr 1.4fr 1fr 1fr;
+    grid-template-columns: 10fr;
+    row-gap: 2%;
+  }
+  .nav-bar {
+    margin: 0% 5% 5%;
 
-        &__name{
-            font-size: 3rem;
+    &__name {
+      font-size: 3rem;
+    }
+    &__surname {
+      font-size: 3rem;
+    }
+    &__button {
+      display: flex;
+      width: 20%;
+      align-items: center;
+      justify-content: space-between;
+      &--about,
+      &--contact,
+      &--portfolio {
+        margin: 0% 0% 0% 5%;
+      }
+      &--about {
+        text-decoration: none;
+        color: $text-color-primary;
+        &:hover {
+          opacity: 0.5;
         }
-        &__surname{
-            font-size: 3rem;
+      }
+      &--contact {
+        text-decoration: none;
+        color: $text-color-primary;
+        &:hover {
+          opacity: 0.5;
         }
-        &__button{
-            display: flex;
-            width: 20%;
-            align-items: center;
-            justify-content: space-between;
-            &--about, &--contact, &--portfolio{
-                margin: 0% 0% 0% 5%;
-            }
-            &--about{
-                text-decoration: none;
-                color: $text-color-primary;
-                &:hover{
-                    opacity: 0.5;
-                }
-            }
-            &--contact{
-                text-decoration: none;
-                color: $text-color-primary;
-                &:hover{
-                    opacity: 0.5;
-                }
-            }
-            &--portfolio{
-                text-decoration: none;
-                color: $text-color-primary;
-                &:hover{
-                    opacity: 0.5;
-                }
-            }
-           }
-        &__options{
-            display: none;
+      }
+      &--portfolio {
+        text-decoration: none;
+        color: $text-color-primary;
+        &:hover {
+          opacity: 0.5;
         }
-        }  
-    .jobTitle{
-        &__text{
-            margin: 5% 0 0% 0;
-            width: 40%;
-        }
-    } 
-    .about{
-        grid-template-areas: 
-        'about-header about-image'
-        'about-paragraph about-image';
-        grid-template-columns: 3fr 1fr;
-        grid-template-rows: 0.2fr 1fr ;
-        align-items: center;
+      }
+    }
+    &__options {
+      display: none;
+    }
+  }
+  .jobTitle {
+    &__text {
+      margin: 5% 0 0% 0;
+      width: 40%;
+    }
+  }
+  .about {
+    grid-template-areas:
+      "about-header about-image"
+      "about-paragraph about-image";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    align-items: center;
+    align-self: center;
+    &__text {
+      &--header {
         align-self: center;
-        &__text{
-            &--header{
-                align-self: center;
-            }
-        }
+      }
     }
-    .skills{
-        display: grid;
-        grid-template-areas: 
-        'skillTxt'
-        'skillIcon';
+  }
+  .skills {
+    display: grid;
+    grid-template-areas:
+      "skillTxt"
+      "skillIcon";
+    align-items: center;
+
+    &__text {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      &--header {
+        justify-content: flex-start;
+        min-width: 20%;
+        font-size: 3rem;
+        grid-area: skillHeader;
+      }
+      &--paragraph {
+        grid-area: skillParagraph;
+      }
+    }
+    &__icon {
+      justify-self: center;
+      grid-area: skillIcon;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 85%;
+      &--box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         align-items: center;
-        
-        &__text{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            &--header{
-                justify-content: flex-start;
-                min-width: 20% ;
-                font-size: 3rem;
-                grid-area: skillHeader;
-            }
-            &--paragraph{
-                grid-area: skillParagraph;
-            }
-        }
-        &__icon{
-            justify-self: center;
-            grid-area: skillIcon;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 85%;
-            &--box{
-                display:flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                align-items: center;
-                min-width: 90px;
-                height: 125px;
-            }
-        }
+        min-width: 90px;
+        height: 125px;
+      }
     }
-    .portfolio{
+  }
+  .portfolio {
+    display: grid;
+    grid-template-areas:
+      "portfolio-title portfolio-title portforlio-title"
+      "project01 project02 project03"
+      "project04 project05 project06";
+    grid-template-rows: 0.15fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr;
+    column-gap: 2%;
+    row-gap: 3%;
+
+    &__card {
+      // &__imgcontainer {
+      //   position: relative;
+      // }
+      // &__overlay {
+      //   position: absolute;
+      //   top: 0;
+      //   bottom: 0;
+      //   left: 0;
+      //   right: 0;
+      //   opacity: 0;
+      //   transition: 0.5s ease;
+      //   background-color: #008cba;
+      // }
+      // &__imgcontainer:hover .portfolio__card__overlay {
+      //   opacity: 1;
+      // }
+      // &__text {
+      //   color: white;
+      //   font-size: 20px;
+      //   position: absolute;
+      //   top: 50%;
+      //   left: 50%;
+      //   -webkit-transform: translate(-50%, -50%);
+      //   -ms-transform: translate(-50%, -50%);
+      //   transform: translate(-50%, -50%);
+      //   text-align: center;
+      // }
+
+      &__RS {
+        width: 100%;
+      }
+      &__react,
+      &__scss {
+        font-size: 0.6rem;
+        background-color: $background-color-secondary;
+        border: 0px;
+        width: 15%;
+      }
+      &__scss {
+        margin: 0 0 0 1%;
+      }
+      &--04,
+      &--05,
+      &--06 {
         display: grid;
-        grid-template-areas:
-        'portfolio-title portfolio-title portforlio-title'
-        'project01 project02 project03'
-        'project04 project05 project06';
-        grid-template-rows: 0.15fr 1fr 1fr;
-        grid-template-columns: 1.5fr 1.5fr 1.5fr;
-        column-gap: 2%;
-        row-gap: 3%;
-
-        &__card{
-
-            // &__imgcontainer {
-            //     position: relative;
-            //   }
-            //   }
-            // &__overlay {
-            //     position: absolute;
-            //     top: 0;
-            //     bottom: 0;
-            //     left: 0;
-            //     right: 0;
-            //     opacity: 0;
-            //     transition: .5s ease;
-            //     background-color: #008CBA;
-            //   }
-            //   &__imgcontainer:hover .portfolio__card__overlay {
-            //     opacity: 1;
-            //   }
-            //   &__text {
-            //     color: white;
-            //     font-size: 20px;
-            //     position: absolute;
-            //     top: 50%;
-            //     left: 50%;
-            //     -webkit-transform: translate(-50%, -50%);
-            //     -ms-transform: translate(-50%, -50%);
-            //     transform: translate(-50%, -50%);
-            //     text-align: center;
-            //   }
-
-            &__RS{
-                width: 100%;
-            }
-            &__react, &__scss{
-                font-size: 0.6rem;
-                background-color: $background-color-secondary;
-                border: 0px;
-                width: 15%;
-            }
-            &__scss{
-                margin: 0 0 0 1%;
-            }
-            &--04,&--05,&--06{
-                display: grid;
-            }
-            &--04{
-                grid-area: project04;
-            }
-            &--05{
-                grid-area: project05;
-            }
-            &--06{
-                grid-area: project06;
-            }
-        }
+      }
+      &--04 {
+        grid-area: project04;
+      }
+      &--05 {
+        grid-area: project05;
+      }
+      &--06 {
+        grid-area: project06;
+      }
     }
-    .get-in-touch{
-        &--title{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8rem;
-        }
-        &--button{
-            width: 30%;
-        }
+  }
+  .get-in-touch {
+    &--title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8rem;
     }
+    &--button {
+      width: 30%;
+    }
+  }
 }
-

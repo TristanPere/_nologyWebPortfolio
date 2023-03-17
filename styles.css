@@ -22,7 +22,7 @@
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
-  color: #D9BEA5;
+  color: #d9bea5;
 }
 .nav-bar__button {
   display: none;
@@ -95,7 +95,7 @@ header {
   grid-area: portfolio;
   display: grid;
   grid-template-areas: "portfolio-title" "project01" "project02" "project03";
-  grid-template-rows: 0.1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr fr 1fr 1fr;
   row-gap: 3%;
 }
 .portfolio__header {
@@ -112,11 +112,13 @@ header {
   display: grid;
   grid-template-areas: "project-image project-image project-image" "project-header eye code-slash" "reactSCSS reactSCSS reactSCSS";
   grid-template-columns: 3fr 1fr 1fr;
-  grid-template-rows: 2.7fr 0.8fr 0.2fr;
+  grid-template-rows: 1fr 0.2fr 0.1fr;
   width: 100%;
 }
 .portfolio__card__screenShot {
   grid-area: project-image;
+  -o-object-fit: contain;
+     object-fit: contain;
   height: 100%;
   width: 100%;
   transition: all 0.2s ease-in-out;
@@ -161,12 +163,12 @@ header {
 }
 .portfolio__card__react {
   font-size: 0.6rem;
-  background-color: #3C3636;
+  background-color: #3c3636;
   border: 0px;
 }
 .portfolio__card__scss {
   font-size: 0.6rem;
-  background-color: #3C3636;
+  background-color: #3c3636;
   border: 0px;
   margin: 0 0 0 2%;
 }
@@ -351,12 +353,37 @@ header {
          column-gap: 2%;
     row-gap: 3%;
   }
+  .portfolio__card__imgcontainer {
+    position: relative;
+  }
+  .portfolio__card__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: #008cba;
+  }
+  .portfolio__card__imgcontainer:hover .portfolio__card__overlay {
+    opacity: 1;
+  }
+  .portfolio__card__text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
   .portfolio__card__RS {
     width: 100%;
   }
   .portfolio__card__react, .portfolio__card__scss {
     font-size: 0.6rem;
-    background-color: #3C3636;
+    background-color: #3c3636;
     border: 0px;
     width: 15%;
   }
